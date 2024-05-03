@@ -6,6 +6,7 @@
   var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
   var __commonJS = (cb, mod) => function __require() {
     return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
@@ -30,10 +31,15 @@
       __defProp(target, key, result);
     return result;
   };
+  var __decorateParam = (index, decorator) => (target, key) => decorator(target, key, index);
+  var __publicField = (obj, key, value) => {
+    __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+    return value;
+  };
 
-  // node_modules/reflect-metadata/Reflect.js
+  // node_modules/.pnpm/reflect-metadata@0.1.14/node_modules/reflect-metadata/Reflect.js
   var require_Reflect = __commonJS({
-    "node_modules/reflect-metadata/Reflect.js"() {
+    "node_modules/.pnpm/reflect-metadata@0.1.14/node_modules/reflect-metadata/Reflect.js"() {
       var Reflect2;
       (function(Reflect3) {
         (function(factory) {
@@ -757,9 +763,9 @@
     }
   });
 
-  // node_modules/starboy-framework/dist/mocks/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/mocks/index.js
   var require_mocks = __commonJS({
-    "node_modules/starboy-framework/dist/mocks/index.js"() {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/mocks/index.js"() {
       global.GetCurrentResourceName || (global.GetCurrentResourceName = () => "current_resource_name");
       global.onNet || (global.onNet = (...args) => {
         console.log("ON NET MOCK", args);
@@ -785,47 +791,47 @@
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/const/metadata-keys.constant.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/metadata-keys.constant.js
   var require_metadata_keys_constant = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/const/metadata-keys.constant.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/metadata-keys.constant.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ONREADY = exports.CONTAINER = exports.EXPORT_CALLBACK = exports.LAZYINJECT = exports.TICK = exports.PARAMETER = exports.GUARD = exports.LOCAL_EVENT = exports.CHAT_COMMAND = exports.EXPORT = exports.NET_CALLBACK = exports.NET_EVENT = exports.NUI = exports.EVENT = exports.CONTROLLER = exports.PROXY = exports.TUNNEL = void 0;
-      exports.TUNNEL = "orp:metadata:tunnel";
-      exports.PROXY = "orp:metadata:proxy";
-      exports.CONTROLLER = "orp:metadata:controller";
-      exports.EVENT = "orp:metadata:event";
-      exports.NUI = "orp:metadata:nui";
-      exports.NET_EVENT = "orp:metadata:net-event";
-      exports.NET_CALLBACK = "orp:metadata:net-callback";
-      exports.EXPORT = "orp:metadata:export";
-      exports.CHAT_COMMAND = "orp:metadata:chat-command";
-      exports.LOCAL_EVENT = "orp:metadata:local-event";
-      exports.GUARD = "orp:metadata:guard";
-      exports.PARAMETER = "orp:metadata:parameter";
-      exports.TICK = "orp:metadata:tick";
-      exports.LAZYINJECT = "orp:metadata:lazyinject";
-      exports.EXPORT_CALLBACK = "orp:export-callbacks";
-      exports.CONTAINER = "orp:metadata:container";
-      exports.ONREADY = "orp:metadata:onready";
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ONREADY = exports2.CONTAINER = exports2.EXPORT_CALLBACK = exports2.LAZYINJECT = exports2.TICK = exports2.PARAMETER = exports2.GUARD = exports2.LOCAL_EVENT = exports2.CHAT_COMMAND = exports2.EXPORT = exports2.NET_CALLBACK = exports2.NET_EVENT = exports2.NUI = exports2.EVENT = exports2.CONTROLLER = exports2.PROXY = exports2.TUNNEL = void 0;
+      exports2.TUNNEL = "orp:metadata:tunnel";
+      exports2.PROXY = "orp:metadata:proxy";
+      exports2.CONTROLLER = "orp:metadata:controller";
+      exports2.EVENT = "orp:metadata:event";
+      exports2.NUI = "orp:metadata:nui";
+      exports2.NET_EVENT = "orp:metadata:net-event";
+      exports2.NET_CALLBACK = "orp:metadata:net-callback";
+      exports2.EXPORT = "orp:metadata:export";
+      exports2.CHAT_COMMAND = "orp:metadata:chat-command";
+      exports2.LOCAL_EVENT = "orp:metadata:local-event";
+      exports2.GUARD = "orp:metadata:guard";
+      exports2.PARAMETER = "orp:metadata:parameter";
+      exports2.TICK = "orp:metadata:tick";
+      exports2.LAZYINJECT = "orp:metadata:lazyinject";
+      exports2.EXPORT_CALLBACK = "orp:export-callbacks";
+      exports2.CONTAINER = "orp:metadata:container";
+      exports2.ONREADY = "orp:metadata:onready";
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/const/platform.constant.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/platform.constant.js
   var require_platform_constant = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/const/platform.constant.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/platform.constant.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.RESOURCE_NAME = void 0;
-      exports.RESOURCE_NAME = GetCurrentResourceName();
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.RESOURCE_NAME = void 0;
+      exports2.RESOURCE_NAME = GetCurrentResourceName();
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/const/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/index.js
   var require_const = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/const/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/const/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -840,61 +846,61 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_metadata_keys_constant(), exports);
-      __exportStar(require_platform_constant(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_metadata_keys_constant(), exports2);
+      __exportStar(require_platform_constant(), exports2);
     }
   });
 
-  // node_modules/inversify/lib/constants/metadata_keys.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/metadata_keys.js
   var require_metadata_keys = __commonJS({
-    "node_modules/inversify/lib/constants/metadata_keys.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/metadata_keys.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.NON_CUSTOM_TAG_KEYS = exports.PRE_DESTROY = exports.POST_CONSTRUCT = exports.DESIGN_PARAM_TYPES = exports.PARAM_TYPES = exports.TAGGED_PROP = exports.TAGGED = exports.MULTI_INJECT_TAG = exports.INJECT_TAG = exports.OPTIONAL_TAG = exports.UNMANAGED_TAG = exports.NAME_TAG = exports.NAMED_TAG = void 0;
-      exports.NAMED_TAG = "named";
-      exports.NAME_TAG = "name";
-      exports.UNMANAGED_TAG = "unmanaged";
-      exports.OPTIONAL_TAG = "optional";
-      exports.INJECT_TAG = "inject";
-      exports.MULTI_INJECT_TAG = "multi_inject";
-      exports.TAGGED = "inversify:tagged";
-      exports.TAGGED_PROP = "inversify:tagged_props";
-      exports.PARAM_TYPES = "inversify:paramtypes";
-      exports.DESIGN_PARAM_TYPES = "design:paramtypes";
-      exports.POST_CONSTRUCT = "post_construct";
-      exports.PRE_DESTROY = "pre_destroy";
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.NON_CUSTOM_TAG_KEYS = exports2.PRE_DESTROY = exports2.POST_CONSTRUCT = exports2.DESIGN_PARAM_TYPES = exports2.PARAM_TYPES = exports2.TAGGED_PROP = exports2.TAGGED = exports2.MULTI_INJECT_TAG = exports2.INJECT_TAG = exports2.OPTIONAL_TAG = exports2.UNMANAGED_TAG = exports2.NAME_TAG = exports2.NAMED_TAG = void 0;
+      exports2.NAMED_TAG = "named";
+      exports2.NAME_TAG = "name";
+      exports2.UNMANAGED_TAG = "unmanaged";
+      exports2.OPTIONAL_TAG = "optional";
+      exports2.INJECT_TAG = "inject";
+      exports2.MULTI_INJECT_TAG = "multi_inject";
+      exports2.TAGGED = "inversify:tagged";
+      exports2.TAGGED_PROP = "inversify:tagged_props";
+      exports2.PARAM_TYPES = "inversify:paramtypes";
+      exports2.DESIGN_PARAM_TYPES = "design:paramtypes";
+      exports2.POST_CONSTRUCT = "post_construct";
+      exports2.PRE_DESTROY = "pre_destroy";
       function getNonCustomTagKeys() {
         return [
-          exports.INJECT_TAG,
-          exports.MULTI_INJECT_TAG,
-          exports.NAME_TAG,
-          exports.UNMANAGED_TAG,
-          exports.NAMED_TAG,
-          exports.OPTIONAL_TAG
+          exports2.INJECT_TAG,
+          exports2.MULTI_INJECT_TAG,
+          exports2.NAME_TAG,
+          exports2.UNMANAGED_TAG,
+          exports2.NAMED_TAG,
+          exports2.OPTIONAL_TAG
         ];
       }
-      exports.NON_CUSTOM_TAG_KEYS = getNonCustomTagKeys();
+      exports2.NON_CUSTOM_TAG_KEYS = getNonCustomTagKeys();
     }
   });
 
-  // node_modules/inversify/lib/constants/literal_types.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/literal_types.js
   var require_literal_types = __commonJS({
-    "node_modules/inversify/lib/constants/literal_types.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/literal_types.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.TargetTypeEnum = exports.BindingTypeEnum = exports.BindingScopeEnum = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.TargetTypeEnum = exports2.BindingTypeEnum = exports2.BindingScopeEnum = void 0;
       var BindingScopeEnum = {
         Request: "Request",
         Singleton: "Singleton",
         Transient: "Transient"
       };
-      exports.BindingScopeEnum = BindingScopeEnum;
+      exports2.BindingScopeEnum = BindingScopeEnum;
       var BindingTypeEnum = {
         ConstantValue: "ConstantValue",
         Constructor: "Constructor",
@@ -905,36 +911,36 @@
         Invalid: "Invalid",
         Provider: "Provider"
       };
-      exports.BindingTypeEnum = BindingTypeEnum;
+      exports2.BindingTypeEnum = BindingTypeEnum;
       var TargetTypeEnum = {
         ClassProperty: "ClassProperty",
         ConstructorArgument: "ConstructorArgument",
         Variable: "Variable"
       };
-      exports.TargetTypeEnum = TargetTypeEnum;
+      exports2.TargetTypeEnum = TargetTypeEnum;
     }
   });
 
-  // node_modules/inversify/lib/utils/id.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/id.js
   var require_id = __commonJS({
-    "node_modules/inversify/lib/utils/id.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/id.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.id = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.id = void 0;
       var idCounter = 0;
       function id() {
         return idCounter++;
       }
-      exports.id = id;
+      exports2.id = id;
     }
   });
 
-  // node_modules/inversify/lib/bindings/binding.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/bindings/binding.js
   var require_binding = __commonJS({
-    "node_modules/inversify/lib/bindings/binding.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/bindings/binding.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Binding = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Binding = void 0;
       var literal_types_1 = require_literal_types();
       var id_1 = require_id();
       var Binding = function() {
@@ -972,41 +978,41 @@
         };
         return Binding2;
       }();
-      exports.Binding = Binding;
+      exports2.Binding = Binding;
     }
   });
 
-  // node_modules/inversify/lib/constants/error_msgs.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/error_msgs.js
   var require_error_msgs = __commonJS({
-    "node_modules/inversify/lib/constants/error_msgs.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/constants/error_msgs.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.STACK_OVERFLOW = exports.CIRCULAR_DEPENDENCY_IN_FACTORY = exports.ON_DEACTIVATION_ERROR = exports.PRE_DESTROY_ERROR = exports.POST_CONSTRUCT_ERROR = exports.ASYNC_UNBIND_REQUIRED = exports.MULTIPLE_POST_CONSTRUCT_METHODS = exports.MULTIPLE_PRE_DESTROY_METHODS = exports.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK = exports.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE = exports.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE = exports.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT = exports.ARGUMENTS_LENGTH_MISMATCH = exports.INVALID_DECORATOR_OPERATION = exports.INVALID_TO_SELF_VALUE = exports.LAZY_IN_SYNC = exports.INVALID_FUNCTION_BINDING = exports.INVALID_MIDDLEWARE_RETURN = exports.NO_MORE_SNAPSHOTS_AVAILABLE = exports.INVALID_BINDING_TYPE = exports.NOT_IMPLEMENTED = exports.CIRCULAR_DEPENDENCY = exports.UNDEFINED_INJECT_ANNOTATION = exports.MISSING_INJECT_ANNOTATION = exports.MISSING_INJECTABLE_ANNOTATION = exports.NOT_REGISTERED = exports.CANNOT_UNBIND = exports.AMBIGUOUS_MATCH = exports.KEY_NOT_FOUND = exports.NULL_ARGUMENT = exports.DUPLICATED_METADATA = exports.DUPLICATED_INJECTABLE_DECORATOR = void 0;
-      exports.DUPLICATED_INJECTABLE_DECORATOR = "Cannot apply @injectable decorator multiple times.";
-      exports.DUPLICATED_METADATA = "Metadata key was used more than once in a parameter:";
-      exports.NULL_ARGUMENT = "NULL argument";
-      exports.KEY_NOT_FOUND = "Key Not Found";
-      exports.AMBIGUOUS_MATCH = "Ambiguous match found for serviceIdentifier:";
-      exports.CANNOT_UNBIND = "Could not unbind serviceIdentifier:";
-      exports.NOT_REGISTERED = "No matching bindings found for serviceIdentifier:";
-      exports.MISSING_INJECTABLE_ANNOTATION = "Missing required @injectable annotation in:";
-      exports.MISSING_INJECT_ANNOTATION = "Missing required @inject or @multiInject annotation in:";
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.STACK_OVERFLOW = exports2.CIRCULAR_DEPENDENCY_IN_FACTORY = exports2.ON_DEACTIVATION_ERROR = exports2.PRE_DESTROY_ERROR = exports2.POST_CONSTRUCT_ERROR = exports2.ASYNC_UNBIND_REQUIRED = exports2.MULTIPLE_POST_CONSTRUCT_METHODS = exports2.MULTIPLE_PRE_DESTROY_METHODS = exports2.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK = exports2.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE = exports2.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE = exports2.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT = exports2.ARGUMENTS_LENGTH_MISMATCH = exports2.INVALID_DECORATOR_OPERATION = exports2.INVALID_TO_SELF_VALUE = exports2.LAZY_IN_SYNC = exports2.INVALID_FUNCTION_BINDING = exports2.INVALID_MIDDLEWARE_RETURN = exports2.NO_MORE_SNAPSHOTS_AVAILABLE = exports2.INVALID_BINDING_TYPE = exports2.NOT_IMPLEMENTED = exports2.CIRCULAR_DEPENDENCY = exports2.UNDEFINED_INJECT_ANNOTATION = exports2.MISSING_INJECT_ANNOTATION = exports2.MISSING_INJECTABLE_ANNOTATION = exports2.NOT_REGISTERED = exports2.CANNOT_UNBIND = exports2.AMBIGUOUS_MATCH = exports2.KEY_NOT_FOUND = exports2.NULL_ARGUMENT = exports2.DUPLICATED_METADATA = exports2.DUPLICATED_INJECTABLE_DECORATOR = void 0;
+      exports2.DUPLICATED_INJECTABLE_DECORATOR = "Cannot apply @injectable decorator multiple times.";
+      exports2.DUPLICATED_METADATA = "Metadata key was used more than once in a parameter:";
+      exports2.NULL_ARGUMENT = "NULL argument";
+      exports2.KEY_NOT_FOUND = "Key Not Found";
+      exports2.AMBIGUOUS_MATCH = "Ambiguous match found for serviceIdentifier:";
+      exports2.CANNOT_UNBIND = "Could not unbind serviceIdentifier:";
+      exports2.NOT_REGISTERED = "No matching bindings found for serviceIdentifier:";
+      exports2.MISSING_INJECTABLE_ANNOTATION = "Missing required @injectable annotation in:";
+      exports2.MISSING_INJECT_ANNOTATION = "Missing required @inject or @multiInject annotation in:";
       var UNDEFINED_INJECT_ANNOTATION = function(name) {
         return "@inject called with undefined this could mean that the class " + name + " has a circular dependency problem. You can use a LazyServiceIdentifier to  overcome this limitation.";
       };
-      exports.UNDEFINED_INJECT_ANNOTATION = UNDEFINED_INJECT_ANNOTATION;
-      exports.CIRCULAR_DEPENDENCY = "Circular dependency found:";
-      exports.NOT_IMPLEMENTED = "Sorry, this feature is not fully implemented yet.";
-      exports.INVALID_BINDING_TYPE = "Invalid binding type:";
-      exports.NO_MORE_SNAPSHOTS_AVAILABLE = "No snapshot available to restore.";
-      exports.INVALID_MIDDLEWARE_RETURN = "Invalid return type in middleware. Middleware must return!";
-      exports.INVALID_FUNCTION_BINDING = "Value provided to function binding must be a function!";
+      exports2.UNDEFINED_INJECT_ANNOTATION = UNDEFINED_INJECT_ANNOTATION;
+      exports2.CIRCULAR_DEPENDENCY = "Circular dependency found:";
+      exports2.NOT_IMPLEMENTED = "Sorry, this feature is not fully implemented yet.";
+      exports2.INVALID_BINDING_TYPE = "Invalid binding type:";
+      exports2.NO_MORE_SNAPSHOTS_AVAILABLE = "No snapshot available to restore.";
+      exports2.INVALID_MIDDLEWARE_RETURN = "Invalid return type in middleware. Middleware must return!";
+      exports2.INVALID_FUNCTION_BINDING = "Value provided to function binding must be a function!";
       var LAZY_IN_SYNC = function(key) {
         return "You are attempting to construct '" + key + "' in a synchronous way\n but it has asynchronous dependencies.";
       };
-      exports.LAZY_IN_SYNC = LAZY_IN_SYNC;
-      exports.INVALID_TO_SELF_VALUE = "The toSelf function can only be applied when a constructor is used as service identifier";
-      exports.INVALID_DECORATOR_OPERATION = "The @inject @multiInject @tagged and @named decorators must be applied to the parameters of a class constructor or a class property.";
+      exports2.LAZY_IN_SYNC = LAZY_IN_SYNC;
+      exports2.INVALID_TO_SELF_VALUE = "The toSelf function can only be applied when a constructor is used as service identifier";
+      exports2.INVALID_DECORATOR_OPERATION = "The @inject @multiInject @tagged and @named decorators must be applied to the parameters of a class constructor or a class property.";
       var ARGUMENTS_LENGTH_MISMATCH = function() {
         var values = [];
         for (var _i = 0; _i < arguments.length; _i++) {
@@ -1014,39 +1020,39 @@
         }
         return "The number of constructor arguments in the derived class " + (values[0] + " must be >= than the number of constructor arguments of its base class.");
       };
-      exports.ARGUMENTS_LENGTH_MISMATCH = ARGUMENTS_LENGTH_MISMATCH;
-      exports.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT = "Invalid Container constructor argument. Container options must be an object.";
-      exports.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE = 'Invalid Container option. Default scope must be a string ("singleton" or "transient").';
-      exports.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE = "Invalid Container option. Auto bind injectable must be a boolean";
-      exports.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK = "Invalid Container option. Skip base check must be a boolean";
-      exports.MULTIPLE_PRE_DESTROY_METHODS = "Cannot apply @preDestroy decorator multiple times in the same class";
-      exports.MULTIPLE_POST_CONSTRUCT_METHODS = "Cannot apply @postConstruct decorator multiple times in the same class";
-      exports.ASYNC_UNBIND_REQUIRED = "Attempting to unbind dependency with asynchronous destruction (@preDestroy or onDeactivation)";
+      exports2.ARGUMENTS_LENGTH_MISMATCH = ARGUMENTS_LENGTH_MISMATCH;
+      exports2.CONTAINER_OPTIONS_MUST_BE_AN_OBJECT = "Invalid Container constructor argument. Container options must be an object.";
+      exports2.CONTAINER_OPTIONS_INVALID_DEFAULT_SCOPE = 'Invalid Container option. Default scope must be a string ("singleton" or "transient").';
+      exports2.CONTAINER_OPTIONS_INVALID_AUTO_BIND_INJECTABLE = "Invalid Container option. Auto bind injectable must be a boolean";
+      exports2.CONTAINER_OPTIONS_INVALID_SKIP_BASE_CHECK = "Invalid Container option. Skip base check must be a boolean";
+      exports2.MULTIPLE_PRE_DESTROY_METHODS = "Cannot apply @preDestroy decorator multiple times in the same class";
+      exports2.MULTIPLE_POST_CONSTRUCT_METHODS = "Cannot apply @postConstruct decorator multiple times in the same class";
+      exports2.ASYNC_UNBIND_REQUIRED = "Attempting to unbind dependency with asynchronous destruction (@preDestroy or onDeactivation)";
       var POST_CONSTRUCT_ERROR = function(clazz, errorMessage) {
         return "@postConstruct error in class " + clazz + ": " + errorMessage;
       };
-      exports.POST_CONSTRUCT_ERROR = POST_CONSTRUCT_ERROR;
+      exports2.POST_CONSTRUCT_ERROR = POST_CONSTRUCT_ERROR;
       var PRE_DESTROY_ERROR = function(clazz, errorMessage) {
         return "@preDestroy error in class " + clazz + ": " + errorMessage;
       };
-      exports.PRE_DESTROY_ERROR = PRE_DESTROY_ERROR;
+      exports2.PRE_DESTROY_ERROR = PRE_DESTROY_ERROR;
       var ON_DEACTIVATION_ERROR = function(clazz, errorMessage) {
         return "onDeactivation() error in class " + clazz + ": " + errorMessage;
       };
-      exports.ON_DEACTIVATION_ERROR = ON_DEACTIVATION_ERROR;
+      exports2.ON_DEACTIVATION_ERROR = ON_DEACTIVATION_ERROR;
       var CIRCULAR_DEPENDENCY_IN_FACTORY = function(factoryType, serviceIdentifier) {
         return "It looks like there is a circular dependency in one of the '" + factoryType + "' bindings. Please investigate bindings with " + ("service identifier '" + serviceIdentifier + "'.");
       };
-      exports.CIRCULAR_DEPENDENCY_IN_FACTORY = CIRCULAR_DEPENDENCY_IN_FACTORY;
-      exports.STACK_OVERFLOW = "Maximum call stack size exceeded";
+      exports2.CIRCULAR_DEPENDENCY_IN_FACTORY = CIRCULAR_DEPENDENCY_IN_FACTORY;
+      exports2.STACK_OVERFLOW = "Maximum call stack size exceeded";
     }
   });
 
-  // node_modules/inversify/lib/planning/metadata_reader.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/metadata_reader.js
   var require_metadata_reader = __commonJS({
-    "node_modules/inversify/lib/planning/metadata_reader.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/metadata_reader.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1057,12 +1063,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1074,8 +1080,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.MetadataReader = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.MetadataReader = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var MetadataReader = function() {
         function MetadataReader2() {
@@ -1094,17 +1100,17 @@
         };
         return MetadataReader2;
       }();
-      exports.MetadataReader = MetadataReader;
+      exports2.MetadataReader = MetadataReader;
     }
   });
 
-  // node_modules/inversify/lib/bindings/binding_count.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/bindings/binding_count.js
   var require_binding_count = __commonJS({
-    "node_modules/inversify/lib/bindings/binding_count.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/bindings/binding_count.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingCount = void 0;
-      exports.BindingCount = {
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingCount = void 0;
+      exports2.BindingCount = {
         MultipleBindingsAvailable: 2,
         NoBindingsAvailable: 0,
         OnlyOneBindingAvailable: 1
@@ -1112,11 +1118,11 @@
     }
   });
 
-  // node_modules/inversify/lib/utils/exceptions.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/exceptions.js
   var require_exceptions = __commonJS({
-    "node_modules/inversify/lib/utils/exceptions.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/exceptions.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1127,12 +1133,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1144,13 +1150,13 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.tryAndThrowErrorIfStackOverflow = exports.isStackOverflowExeption = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.tryAndThrowErrorIfStackOverflow = exports2.isStackOverflowExeption = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       function isStackOverflowExeption(error) {
         return error instanceof RangeError || error.message === ERROR_MSGS.STACK_OVERFLOW;
       }
-      exports.isStackOverflowExeption = isStackOverflowExeption;
+      exports2.isStackOverflowExeption = isStackOverflowExeption;
       var tryAndThrowErrorIfStackOverflow = function(fn, errorCallback) {
         try {
           return fn();
@@ -1161,15 +1167,15 @@
           throw error;
         }
       };
-      exports.tryAndThrowErrorIfStackOverflow = tryAndThrowErrorIfStackOverflow;
+      exports2.tryAndThrowErrorIfStackOverflow = tryAndThrowErrorIfStackOverflow;
     }
   });
 
-  // node_modules/inversify/lib/utils/serialization.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/serialization.js
   var require_serialization = __commonJS({
-    "node_modules/inversify/lib/utils/serialization.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/serialization.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1180,12 +1186,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1197,8 +1203,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getSymbolDescription = exports.circularDependencyToException = exports.listMetadataForTarget = exports.listRegisteredBindingsForServiceIdentifier = exports.getServiceIdentifierAsString = exports.getFunctionName = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.getSymbolDescription = exports2.circularDependencyToException = exports2.listMetadataForTarget = exports2.listRegisteredBindingsForServiceIdentifier = exports2.getServiceIdentifierAsString = exports2.getFunctionName = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       function getServiceIdentifierAsString(serviceIdentifier) {
         if (typeof serviceIdentifier === "function") {
@@ -1211,7 +1217,7 @@
           return _serviceIdentifier;
         }
       }
-      exports.getServiceIdentifierAsString = getServiceIdentifierAsString;
+      exports2.getServiceIdentifierAsString = getServiceIdentifierAsString;
       function listRegisteredBindingsForServiceIdentifier(container, serviceIdentifier, getBindings) {
         var registeredBindingsList = "";
         var registeredBindings = getBindings(container, serviceIdentifier);
@@ -1230,7 +1236,7 @@
         }
         return registeredBindingsList;
       }
-      exports.listRegisteredBindingsForServiceIdentifier = listRegisteredBindingsForServiceIdentifier;
+      exports2.listRegisteredBindingsForServiceIdentifier = listRegisteredBindingsForServiceIdentifier;
       function alreadyDependencyChain(request, serviceIdentifier) {
         if (request.parentRequest === null) {
           return false;
@@ -1265,7 +1271,7 @@
           }
         });
       }
-      exports.circularDependencyToException = circularDependencyToException;
+      exports2.circularDependencyToException = circularDependencyToException;
       function listMetadataForTarget(serviceIdentifierString, target) {
         if (target.isTagged() || target.isNamed()) {
           var m_1 = "";
@@ -1284,7 +1290,7 @@
           return " " + serviceIdentifierString;
         }
       }
-      exports.listMetadataForTarget = listMetadataForTarget;
+      exports2.listMetadataForTarget = listMetadataForTarget;
       function getFunctionName(func) {
         if (func.name) {
           return func.name;
@@ -1294,20 +1300,20 @@
           return match ? match[1] : "Anonymous function: " + name_1;
         }
       }
-      exports.getFunctionName = getFunctionName;
+      exports2.getFunctionName = getFunctionName;
       function getSymbolDescription(symbol) {
         return symbol.toString().slice(7, -1);
       }
-      exports.getSymbolDescription = getSymbolDescription;
+      exports2.getSymbolDescription = getSymbolDescription;
     }
   });
 
-  // node_modules/inversify/lib/planning/context.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/context.js
   var require_context = __commonJS({
-    "node_modules/inversify/lib/planning/context.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/context.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Context = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Context = void 0;
       var id_1 = require_id();
       var Context = function() {
         function Context2(container) {
@@ -1322,15 +1328,15 @@
         };
         return Context2;
       }();
-      exports.Context = Context;
+      exports2.Context = Context;
     }
   });
 
-  // node_modules/inversify/lib/planning/metadata.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/metadata.js
   var require_metadata = __commonJS({
-    "node_modules/inversify/lib/planning/metadata.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/metadata.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1341,12 +1347,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1358,8 +1364,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Metadata = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Metadata = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var Metadata = function() {
         function Metadata2(key, value) {
@@ -1375,16 +1381,16 @@
         };
         return Metadata2;
       }();
-      exports.Metadata = Metadata;
+      exports2.Metadata = Metadata;
     }
   });
 
-  // node_modules/inversify/lib/planning/plan.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/plan.js
   var require_plan = __commonJS({
-    "node_modules/inversify/lib/planning/plan.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/plan.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Plan = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Plan = void 0;
       var Plan = function() {
         function Plan2(parentContext, rootRequest) {
           this.parentContext = parentContext;
@@ -1392,16 +1398,16 @@
         }
         return Plan2;
       }();
-      exports.Plan = Plan;
+      exports2.Plan = Plan;
     }
   });
 
-  // node_modules/inversify/lib/annotation/lazy_service_identifier.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/lazy_service_identifier.js
   var require_lazy_service_identifier = __commonJS({
-    "node_modules/inversify/lib/annotation/lazy_service_identifier.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/lazy_service_identifier.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.LazyServiceIdentifier = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.LazyServiceIdentifier = void 0;
       var LazyServiceIdentifier = function() {
         function LazyServiceIdentifier2(cb) {
           this._cb = cb;
@@ -1411,16 +1417,16 @@
         };
         return LazyServiceIdentifier2;
       }();
-      exports.LazyServiceIdentifier = LazyServiceIdentifier;
+      exports2.LazyServiceIdentifier = LazyServiceIdentifier;
     }
   });
 
-  // node_modules/inversify/lib/planning/queryable_string.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/queryable_string.js
   var require_queryable_string = __commonJS({
-    "node_modules/inversify/lib/planning/queryable_string.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/queryable_string.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.QueryableString = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.QueryableString = void 0;
       var QueryableString = function() {
         function QueryableString2(str) {
           this.str = str;
@@ -1445,15 +1451,15 @@
         };
         return QueryableString2;
       }();
-      exports.QueryableString = QueryableString;
+      exports2.QueryableString = QueryableString;
     }
   });
 
-  // node_modules/inversify/lib/planning/target.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/target.js
   var require_target = __commonJS({
-    "node_modules/inversify/lib/planning/target.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/target.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1464,12 +1470,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1481,8 +1487,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Target = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Target = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var id_1 = require_id();
       var serialization_1 = require_serialization();
@@ -1571,15 +1577,15 @@
         };
         return Target2;
       }();
-      exports.Target = Target;
+      exports2.Target = Target;
     }
   });
 
-  // node_modules/inversify/lib/planning/reflection_utils.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/reflection_utils.js
   var require_reflection_utils = __commonJS({
-    "node_modules/inversify/lib/planning/reflection_utils.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/reflection_utils.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1590,12 +1596,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1607,7 +1613,7 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      var __spreadArray = exports && exports.__spreadArray || function(to, from, pack) {
+      var __spreadArray = exports2 && exports2.__spreadArray || function(to, from, pack) {
         if (pack || arguments.length === 2)
           for (var i = 0, l = from.length, ar; i < l; i++) {
             if (ar || !(i in from)) {
@@ -1618,14 +1624,14 @@
           }
         return to.concat(ar || Array.prototype.slice.call(from));
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getFunctionName = exports.getBaseClassDependencyCount = exports.getDependencies = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.getFunctionName = exports2.getBaseClassDependencyCount = exports2.getDependencies = void 0;
       var lazy_service_identifier_1 = require_lazy_service_identifier();
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
       var METADATA_KEY = __importStar(require_metadata_keys());
       var serialization_1 = require_serialization();
-      Object.defineProperty(exports, "getFunctionName", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "getFunctionName", { enumerable: true, get: function() {
         return serialization_1.getFunctionName;
       } });
       var target_1 = require_target();
@@ -1633,7 +1639,7 @@
         var constructorName = (0, serialization_1.getFunctionName)(func);
         return getTargets(metadataReader, constructorName, func, false);
       }
-      exports.getDependencies = getDependencies;
+      exports2.getDependencies = getDependencies;
       function getTargets(metadataReader, constructorName, func, isBaseClass) {
         var metadata = metadataReader.getConstructorMetadata(func);
         var serviceIdentifiers = metadata.compilerGeneratedMetadata;
@@ -1739,7 +1745,7 @@
           return 0;
         }
       }
-      exports.getBaseClassDependencyCount = getBaseClassDependencyCount;
+      exports2.getBaseClassDependencyCount = getBaseClassDependencyCount;
       function formatTargetMetadata(targetMetadata) {
         var targetMetadataMap = {};
         targetMetadata.forEach(function(m) {
@@ -1755,12 +1761,12 @@
     }
   });
 
-  // node_modules/inversify/lib/planning/request.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/request.js
   var require_request = __commonJS({
-    "node_modules/inversify/lib/planning/request.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/request.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Request = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Request = void 0;
       var id_1 = require_id();
       var Request = function() {
         function Request2(serviceIdentifier, parentContext, parentRequest, bindings, target) {
@@ -1780,15 +1786,15 @@
         };
         return Request2;
       }();
-      exports.Request = Request;
+      exports2.Request = Request;
     }
   });
 
-  // node_modules/inversify/lib/planning/planner.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/planner.js
   var require_planner = __commonJS({
-    "node_modules/inversify/lib/planning/planner.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/planning/planner.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -1799,12 +1805,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -1816,8 +1822,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getBindingDictionary = exports.createMockRequest = exports.plan = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.getBindingDictionary = exports2.createMockRequest = exports2.plan = void 0;
       var binding_count_1 = require_binding_count();
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
@@ -1833,7 +1839,7 @@
       function getBindingDictionary(cntnr) {
         return cntnr._bindingDictionary;
       }
-      exports.getBindingDictionary = getBindingDictionary;
+      exports2.getBindingDictionary = getBindingDictionary;
       function _createTarget(isMultiInject, targetType, serviceIdentifier, name, key, value) {
         var metadataKey = isMultiInject ? METADATA_KEY.MULTI_INJECT_TAG : METADATA_KEY.INJECT_TAG;
         var injectMetadata = new metadata_1.Metadata(metadataKey, serviceIdentifier);
@@ -1951,43 +1957,43 @@
           throw error;
         }
       }
-      exports.plan = plan;
+      exports2.plan = plan;
       function createMockRequest(container, serviceIdentifier, key, value) {
         var target = new target_1.Target(literal_types_1.TargetTypeEnum.Variable, "", serviceIdentifier, new metadata_1.Metadata(key, value));
         var context = new context_1.Context(container);
         var request = new request_1.Request(serviceIdentifier, context, null, [], target);
         return request;
       }
-      exports.createMockRequest = createMockRequest;
+      exports2.createMockRequest = createMockRequest;
     }
   });
 
-  // node_modules/inversify/lib/utils/async.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/async.js
   var require_async = __commonJS({
-    "node_modules/inversify/lib/utils/async.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/async.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.isPromiseOrContainsPromise = exports.isPromise = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.isPromiseOrContainsPromise = exports2.isPromise = void 0;
       function isPromise(object) {
         var isObjectOrFunction = typeof object === "object" && object !== null || typeof object === "function";
         return isObjectOrFunction && typeof object.then === "function";
       }
-      exports.isPromise = isPromise;
+      exports2.isPromise = isPromise;
       function isPromiseOrContainsPromise(object) {
         if (isPromise(object)) {
           return true;
         }
         return Array.isArray(object) && object.some(isPromise);
       }
-      exports.isPromiseOrContainsPromise = isPromiseOrContainsPromise;
+      exports2.isPromiseOrContainsPromise = isPromiseOrContainsPromise;
     }
   });
 
-  // node_modules/inversify/lib/scope/scope.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/scope/scope.js
   var require_scope = __commonJS({
-    "node_modules/inversify/lib/scope/scope.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/scope/scope.js"(exports2) {
       "use strict";
-      var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
+      var __awaiter = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
         function adopt(value) {
           return value instanceof P ? value : new P(function(resolve) {
             resolve(value);
@@ -2014,7 +2020,7 @@
           step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
       };
-      var __generator = exports && exports.__generator || function(thisArg, body) {
+      var __generator = exports2 && exports2.__generator || function(thisArg, body) {
         var _ = { label: 0, sent: function() {
           if (t[0] & 1)
             throw t[1];
@@ -2090,8 +2096,8 @@
           return { value: op[0] ? op[1] : void 0, done: true };
         }
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.saveToScope = exports.tryGetFromScope = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.saveToScope = exports2.tryGetFromScope = void 0;
       var literal_types_1 = require_literal_types();
       var async_1 = require_async();
       var tryGetFromScope = function(requestScope, binding) {
@@ -2103,7 +2109,7 @@
         }
         return null;
       };
-      exports.tryGetFromScope = tryGetFromScope;
+      exports2.tryGetFromScope = tryGetFromScope;
       var saveToScope = function(requestScope, binding, result) {
         if (binding.scope === literal_types_1.BindingScopeEnum.Singleton) {
           _saveToSingletonScope(binding, result);
@@ -2112,7 +2118,7 @@
           _saveToRequestScope(requestScope, binding, result);
         }
       };
-      exports.saveToScope = saveToScope;
+      exports2.saveToScope = saveToScope;
       var _saveToRequestScope = function(requestScope, binding, result) {
         if (!requestScope.has(binding.id)) {
           requestScope.set(binding.id, result);
@@ -2151,26 +2157,26 @@
     }
   });
 
-  // node_modules/inversify/lib/utils/factory_type.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/factory_type.js
   var require_factory_type = __commonJS({
-    "node_modules/inversify/lib/utils/factory_type.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/factory_type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.FactoryType = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.FactoryType = void 0;
       var FactoryType;
       (function(FactoryType2) {
         FactoryType2["DynamicValue"] = "toDynamicValue";
         FactoryType2["Factory"] = "toFactory";
         FactoryType2["Provider"] = "toProvider";
-      })(FactoryType = exports.FactoryType || (exports.FactoryType = {}));
+      })(FactoryType = exports2.FactoryType || (exports2.FactoryType = {}));
     }
   });
 
-  // node_modules/inversify/lib/utils/binding_utils.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/binding_utils.js
   var require_binding_utils = __commonJS({
-    "node_modules/inversify/lib/utils/binding_utils.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/binding_utils.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -2181,12 +2187,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -2198,8 +2204,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getFactoryDetails = exports.ensureFullyBound = exports.multiBindToService = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.getFactoryDetails = exports2.ensureFullyBound = exports2.multiBindToService = void 0;
       var serialization_1 = require_serialization();
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
@@ -2217,7 +2223,7 @@
           };
         };
       };
-      exports.multiBindToService = multiBindToService;
+      exports2.multiBindToService = multiBindToService;
       var ensureFullyBound = function(binding) {
         var boundValue = null;
         switch (binding.type) {
@@ -2244,7 +2250,7 @@
           throw new Error(ERROR_MSGS.INVALID_BINDING_TYPE + " " + serviceIdentifierAsString);
         }
       };
-      exports.ensureFullyBound = ensureFullyBound;
+      exports2.ensureFullyBound = ensureFullyBound;
       var getFactoryDetails = function(binding) {
         switch (binding.type) {
           case literal_types_1.BindingTypeEnum.Factory:
@@ -2257,15 +2263,15 @@
             throw new Error("Unexpected factory type " + binding.type);
         }
       };
-      exports.getFactoryDetails = getFactoryDetails;
+      exports2.getFactoryDetails = getFactoryDetails;
     }
   });
 
-  // node_modules/inversify/lib/resolution/instantiation.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/resolution/instantiation.js
   var require_instantiation = __commonJS({
-    "node_modules/inversify/lib/resolution/instantiation.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/resolution/instantiation.js"(exports2) {
       "use strict";
-      var __assign = exports && exports.__assign || function() {
+      var __assign = exports2 && exports2.__assign || function() {
         __assign = Object.assign || function(t) {
           for (var s, i = 1, n = arguments.length; i < n; i++) {
             s = arguments[i];
@@ -2277,7 +2283,7 @@
         };
         return __assign.apply(this, arguments);
       };
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -2288,12 +2294,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -2305,7 +2311,7 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
+      var __awaiter = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
         function adopt(value) {
           return value instanceof P ? value : new P(function(resolve) {
             resolve(value);
@@ -2332,7 +2338,7 @@
           step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
       };
-      var __generator = exports && exports.__generator || function(thisArg, body) {
+      var __generator = exports2 && exports2.__generator || function(thisArg, body) {
         var _ = { label: 0, sent: function() {
           if (t[0] & 1)
             throw t[1];
@@ -2408,7 +2414,7 @@
           return { value: op[0] ? op[1] : void 0, done: true };
         }
       };
-      var __spreadArray = exports && exports.__spreadArray || function(to, from, pack) {
+      var __spreadArray = exports2 && exports2.__spreadArray || function(to, from, pack) {
         if (pack || arguments.length === 2)
           for (var i = 0, l = from.length, ar; i < l; i++) {
             if (ar || !(i in from)) {
@@ -2419,8 +2425,8 @@
           }
         return to.concat(ar || Array.prototype.slice.call(from));
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.resolveInstance = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.resolveInstance = void 0;
       var error_msgs_1 = require_error_msgs();
       var literal_types_1 = require_literal_types();
       var METADATA_KEY = __importStar(require_metadata_keys());
@@ -2550,15 +2556,15 @@
           return _getInstanceAfterPostConstruct(constr, result);
         }
       }
-      exports.resolveInstance = resolveInstance;
+      exports2.resolveInstance = resolveInstance;
     }
   });
 
-  // node_modules/inversify/lib/resolution/resolver.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/resolution/resolver.js
   var require_resolver = __commonJS({
-    "node_modules/inversify/lib/resolution/resolver.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/resolution/resolver.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -2569,12 +2575,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -2586,7 +2592,7 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
+      var __awaiter = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
         function adopt(value) {
           return value instanceof P ? value : new P(function(resolve2) {
             resolve2(value);
@@ -2613,7 +2619,7 @@
           step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
       };
-      var __generator = exports && exports.__generator || function(thisArg, body) {
+      var __generator = exports2 && exports2.__generator || function(thisArg, body) {
         var _ = { label: 0, sent: function() {
           if (t[0] & 1)
             throw t[1];
@@ -2689,8 +2695,8 @@
           return { value: op[0] ? op[1] : void 0, done: true };
         }
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.resolve = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.resolve = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
       var planner_1 = require_planner();
@@ -2862,15 +2868,15 @@
         var _f = _resolveRequest(context.plan.rootRequest.requestScope);
         return _f(context.plan.rootRequest);
       }
-      exports.resolve = resolve;
+      exports2.resolve = resolve;
     }
   });
 
-  // node_modules/inversify/lib/syntax/constraint_helpers.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/constraint_helpers.js
   var require_constraint_helpers = __commonJS({
-    "node_modules/inversify/lib/syntax/constraint_helpers.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/constraint_helpers.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -2881,12 +2887,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -2898,8 +2904,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.typeConstraint = exports.namedConstraint = exports.taggedConstraint = exports.traverseAncerstors = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.typeConstraint = exports2.namedConstraint = exports2.taggedConstraint = exports2.traverseAncerstors = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var metadata_1 = require_metadata();
       var traverseAncerstors = function(request, constraint) {
@@ -2910,7 +2916,7 @@
           return false;
         }
       };
-      exports.traverseAncerstors = traverseAncerstors;
+      exports2.traverseAncerstors = traverseAncerstors;
       var taggedConstraint = function(key) {
         return function(value) {
           var constraint = function(request) {
@@ -2920,9 +2926,9 @@
           return constraint;
         };
       };
-      exports.taggedConstraint = taggedConstraint;
+      exports2.taggedConstraint = taggedConstraint;
       var namedConstraint = taggedConstraint(METADATA_KEY.NAMED_TAG);
-      exports.namedConstraint = namedConstraint;
+      exports2.namedConstraint = namedConstraint;
       var typeConstraint = function(type) {
         return function(request) {
           var binding = null;
@@ -2939,16 +2945,16 @@
           return false;
         };
       };
-      exports.typeConstraint = typeConstraint;
+      exports2.typeConstraint = typeConstraint;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_when_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_when_syntax.js
   var require_binding_when_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_when_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_when_syntax.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingWhenSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingWhenSyntax = void 0;
       var binding_on_syntax_1 = require_binding_on_syntax();
       var constraint_helpers_1 = require_constraint_helpers();
       var BindingWhenSyntax = function() {
@@ -3045,16 +3051,16 @@
         };
         return BindingWhenSyntax2;
       }();
-      exports.BindingWhenSyntax = BindingWhenSyntax;
+      exports2.BindingWhenSyntax = BindingWhenSyntax;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_on_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_on_syntax.js
   var require_binding_on_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_on_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_on_syntax.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingOnSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingOnSyntax = void 0;
       var binding_when_syntax_1 = require_binding_when_syntax();
       var BindingOnSyntax = function() {
         function BindingOnSyntax2(binding) {
@@ -3070,16 +3076,16 @@
         };
         return BindingOnSyntax2;
       }();
-      exports.BindingOnSyntax = BindingOnSyntax;
+      exports2.BindingOnSyntax = BindingOnSyntax;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_when_on_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_when_on_syntax.js
   var require_binding_when_on_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_when_on_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_when_on_syntax.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingWhenOnSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingWhenOnSyntax = void 0;
       var binding_on_syntax_1 = require_binding_on_syntax();
       var binding_when_syntax_1 = require_binding_when_syntax();
       var BindingWhenOnSyntax = function() {
@@ -3141,16 +3147,16 @@
         };
         return BindingWhenOnSyntax2;
       }();
-      exports.BindingWhenOnSyntax = BindingWhenOnSyntax;
+      exports2.BindingWhenOnSyntax = BindingWhenOnSyntax;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_in_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_in_syntax.js
   var require_binding_in_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_in_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_in_syntax.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingInSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingInSyntax = void 0;
       var literal_types_1 = require_literal_types();
       var binding_when_on_syntax_1 = require_binding_when_on_syntax();
       var BindingInSyntax = function() {
@@ -3171,16 +3177,16 @@
         };
         return BindingInSyntax2;
       }();
-      exports.BindingInSyntax = BindingInSyntax;
+      exports2.BindingInSyntax = BindingInSyntax;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js
   var require_binding_in_when_on_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_in_when_on_syntax.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingInWhenOnSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingInWhenOnSyntax = void 0;
       var binding_in_syntax_1 = require_binding_in_syntax();
       var binding_on_syntax_1 = require_binding_on_syntax();
       var binding_when_syntax_1 = require_binding_when_syntax();
@@ -3253,15 +3259,15 @@
         };
         return BindingInWhenOnSyntax2;
       }();
-      exports.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
+      exports2.BindingInWhenOnSyntax = BindingInWhenOnSyntax;
     }
   });
 
-  // node_modules/inversify/lib/syntax/binding_to_syntax.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_to_syntax.js
   var require_binding_to_syntax = __commonJS({
-    "node_modules/inversify/lib/syntax/binding_to_syntax.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/syntax/binding_to_syntax.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -3272,12 +3278,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -3289,8 +3295,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.BindingToSyntax = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.BindingToSyntax = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
       var binding_in_when_on_syntax_1 = require_binding_in_when_on_syntax();
@@ -3380,16 +3386,16 @@
         };
         return BindingToSyntax2;
       }();
-      exports.BindingToSyntax = BindingToSyntax;
+      exports2.BindingToSyntax = BindingToSyntax;
     }
   });
 
-  // node_modules/inversify/lib/container/container_snapshot.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container_snapshot.js
   var require_container_snapshot = __commonJS({
-    "node_modules/inversify/lib/container/container_snapshot.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container_snapshot.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ContainerSnapshot = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ContainerSnapshot = void 0;
       var ContainerSnapshot = function() {
         function ContainerSnapshot2() {
         }
@@ -3404,28 +3410,28 @@
         };
         return ContainerSnapshot2;
       }();
-      exports.ContainerSnapshot = ContainerSnapshot;
+      exports2.ContainerSnapshot = ContainerSnapshot;
     }
   });
 
-  // node_modules/inversify/lib/utils/clonable.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/clonable.js
   var require_clonable = __commonJS({
-    "node_modules/inversify/lib/utils/clonable.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/clonable.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.isClonable = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.isClonable = void 0;
       function isClonable(obj) {
         return typeof obj === "object" && obj !== null && "clone" in obj && typeof obj.clone === "function";
       }
-      exports.isClonable = isClonable;
+      exports2.isClonable = isClonable;
     }
   });
 
-  // node_modules/inversify/lib/container/lookup.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/lookup.js
   var require_lookup = __commonJS({
-    "node_modules/inversify/lib/container/lookup.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/lookup.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -3436,12 +3442,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -3453,8 +3459,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Lookup = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Lookup = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       var clonable_1 = require_clonable();
       var Lookup = function() {
@@ -3558,16 +3564,16 @@
         };
         return Lookup2;
       }();
-      exports.Lookup = Lookup;
+      exports2.Lookup = Lookup;
     }
   });
 
-  // node_modules/inversify/lib/container/module_activation_store.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/module_activation_store.js
   var require_module_activation_store = __commonJS({
-    "node_modules/inversify/lib/container/module_activation_store.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/module_activation_store.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ModuleActivationStore = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ModuleActivationStore = void 0;
       var lookup_1 = require_lookup();
       var ModuleActivationStore = function() {
         function ModuleActivationStore2() {
@@ -3614,15 +3620,15 @@
         };
         return ModuleActivationStore2;
       }();
-      exports.ModuleActivationStore = ModuleActivationStore;
+      exports2.ModuleActivationStore = ModuleActivationStore;
     }
   });
 
-  // node_modules/inversify/lib/container/container.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container.js
   var require_container = __commonJS({
-    "node_modules/inversify/lib/container/container.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container.js"(exports2) {
       "use strict";
-      var __assign = exports && exports.__assign || function() {
+      var __assign = exports2 && exports2.__assign || function() {
         __assign = Object.assign || function(t) {
           for (var s, i = 1, n = arguments.length; i < n; i++) {
             s = arguments[i];
@@ -3634,7 +3640,7 @@
         };
         return __assign.apply(this, arguments);
       };
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -3645,12 +3651,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -3662,7 +3668,7 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
+      var __awaiter = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
         function adopt(value) {
           return value instanceof P ? value : new P(function(resolve) {
             resolve(value);
@@ -3689,7 +3695,7 @@
           step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
       };
-      var __generator = exports && exports.__generator || function(thisArg, body) {
+      var __generator = exports2 && exports2.__generator || function(thisArg, body) {
         var _ = { label: 0, sent: function() {
           if (t[0] & 1)
             throw t[1];
@@ -3765,7 +3771,7 @@
           return { value: op[0] ? op[1] : void 0, done: true };
         }
       };
-      var __spreadArray = exports && exports.__spreadArray || function(to, from, pack) {
+      var __spreadArray = exports2 && exports2.__spreadArray || function(to, from, pack) {
         if (pack || arguments.length === 2)
           for (var i = 0, l = from.length, ar; i < l; i++) {
             if (ar || !(i in from)) {
@@ -3776,8 +3782,8 @@
           }
         return to.concat(ar || Array.prototype.slice.call(from));
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Container = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Container = void 0;
       var binding_1 = require_binding();
       var ERROR_MSGS = __importStar(require_error_msgs());
       var literal_types_1 = require_literal_types();
@@ -4455,16 +4461,16 @@
         };
         return Container2;
       }();
-      exports.Container = Container;
+      exports2.Container = Container;
     }
   });
 
-  // node_modules/inversify/lib/container/container_module.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container_module.js
   var require_container_module = __commonJS({
-    "node_modules/inversify/lib/container/container_module.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/container/container_module.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.AsyncContainerModule = exports.ContainerModule = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.AsyncContainerModule = exports2.ContainerModule = void 0;
       var id_1 = require_id();
       var ContainerModule = function() {
         function ContainerModule2(registry) {
@@ -4473,7 +4479,7 @@
         }
         return ContainerModule2;
       }();
-      exports.ContainerModule = ContainerModule;
+      exports2.ContainerModule = ContainerModule;
       var AsyncContainerModule = function() {
         function AsyncContainerModule2(registry) {
           this.id = (0, id_1.id)();
@@ -4481,16 +4487,16 @@
         }
         return AsyncContainerModule2;
       }();
-      exports.AsyncContainerModule = AsyncContainerModule;
+      exports2.AsyncContainerModule = AsyncContainerModule;
     }
   });
 
-  // node_modules/inversify/lib/utils/js.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/js.js
   var require_js = __commonJS({
-    "node_modules/inversify/lib/utils/js.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/utils/js.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.getFirstArrayDuplicate = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.getFirstArrayDuplicate = void 0;
       function getFirstArrayDuplicate(array) {
         var seenValues = /* @__PURE__ */ new Set();
         for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
@@ -4503,15 +4509,15 @@
         }
         return void 0;
       }
-      exports.getFirstArrayDuplicate = getFirstArrayDuplicate;
+      exports2.getFirstArrayDuplicate = getFirstArrayDuplicate;
     }
   });
 
-  // node_modules/inversify/lib/annotation/decorator_utils.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/decorator_utils.js
   var require_decorator_utils = __commonJS({
-    "node_modules/inversify/lib/annotation/decorator_utils.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/decorator_utils.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4522,12 +4528,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4539,8 +4545,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.createTaggedDecorator = exports.tagProperty = exports.tagParameter = exports.decorate = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.createTaggedDecorator = exports2.tagProperty = exports2.tagParameter = exports2.decorate = void 0;
       var ERROR_MSGS = __importStar(require_error_msgs());
       var METADATA_KEY = __importStar(require_metadata_keys());
       var js_1 = require_js();
@@ -4556,14 +4562,14 @@
         _throwIfMethodParameter(parameterName);
         _tagParameterOrProperty(METADATA_KEY.TAGGED, annotationTarget, parameterIndex.toString(), metadata);
       }
-      exports.tagParameter = tagParameter;
+      exports2.tagParameter = tagParameter;
       function tagProperty(annotationTarget, propertyName, metadata) {
         if (targetIsConstructorFunction(annotationTarget)) {
           throw new Error(ERROR_MSGS.INVALID_DECORATOR_OPERATION);
         }
         _tagParameterOrProperty(METADATA_KEY.TAGGED_PROP, annotationTarget.constructor, propertyName, metadata);
       }
-      exports.tagProperty = tagProperty;
+      exports2.tagProperty = tagProperty;
       function _ensureNoMetadataKeyDuplicates(metadata) {
         var metadatas = [];
         if (Array.isArray(metadata)) {
@@ -4614,7 +4620,7 @@
           }
         };
       }
-      exports.createTaggedDecorator = createTaggedDecorator;
+      exports2.createTaggedDecorator = createTaggedDecorator;
       function _decorate(decorators, target) {
         Reflect.decorate(decorators, target);
       }
@@ -4632,15 +4638,15 @@
           _decorate([decorator], target);
         }
       }
-      exports.decorate = decorate;
+      exports2.decorate = decorate;
     }
   });
 
-  // node_modules/inversify/lib/annotation/injectable.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/injectable.js
   var require_injectable = __commonJS({
-    "node_modules/inversify/lib/annotation/injectable.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/injectable.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4651,12 +4657,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4668,8 +4674,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.injectable = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.injectable = void 0;
       var ERRORS_MSGS = __importStar(require_error_msgs());
       var METADATA_KEY = __importStar(require_metadata_keys());
       function injectable() {
@@ -4682,30 +4688,30 @@
           return target;
         };
       }
-      exports.injectable = injectable;
+      exports2.injectable = injectable;
     }
   });
 
-  // node_modules/inversify/lib/annotation/tagged.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/tagged.js
   var require_tagged = __commonJS({
-    "node_modules/inversify/lib/annotation/tagged.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/tagged.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.tagged = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.tagged = void 0;
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
       function tagged(metadataKey, metadataValue) {
         return (0, decorator_utils_1.createTaggedDecorator)(new metadata_1.Metadata(metadataKey, metadataValue));
       }
-      exports.tagged = tagged;
+      exports2.tagged = tagged;
     }
   });
 
-  // node_modules/inversify/lib/annotation/named.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/named.js
   var require_named = __commonJS({
-    "node_modules/inversify/lib/annotation/named.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/named.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4716,12 +4722,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4733,24 +4739,24 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.named = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.named = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
       function named(name) {
         return (0, decorator_utils_1.createTaggedDecorator)(new metadata_1.Metadata(METADATA_KEY.NAMED_TAG, name));
       }
-      exports.named = named;
+      exports2.named = named;
     }
   });
 
-  // node_modules/inversify/lib/annotation/inject_base.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/inject_base.js
   var require_inject_base = __commonJS({
-    "node_modules/inversify/lib/annotation/inject_base.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/inject_base.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.injectBase = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.injectBase = void 0;
       var error_msgs_1 = require_error_msgs();
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
@@ -4765,15 +4771,15 @@
           };
         };
       }
-      exports.injectBase = injectBase;
+      exports2.injectBase = injectBase;
     }
   });
 
-  // node_modules/inversify/lib/annotation/inject.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/inject.js
   var require_inject = __commonJS({
-    "node_modules/inversify/lib/annotation/inject.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/inject.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4784,12 +4790,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4801,20 +4807,20 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.inject = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.inject = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var inject_base_1 = require_inject_base();
       var inject = (0, inject_base_1.injectBase)(METADATA_KEY.INJECT_TAG);
-      exports.inject = inject;
+      exports2.inject = inject;
     }
   });
 
-  // node_modules/inversify/lib/annotation/optional.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/optional.js
   var require_optional = __commonJS({
-    "node_modules/inversify/lib/annotation/optional.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/optional.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4825,12 +4831,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4842,23 +4848,23 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.optional = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.optional = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
       function optional() {
         return (0, decorator_utils_1.createTaggedDecorator)(new metadata_1.Metadata(METADATA_KEY.OPTIONAL_TAG, true));
       }
-      exports.optional = optional;
+      exports2.optional = optional;
     }
   });
 
-  // node_modules/inversify/lib/annotation/unmanaged.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/unmanaged.js
   var require_unmanaged = __commonJS({
-    "node_modules/inversify/lib/annotation/unmanaged.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/unmanaged.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4869,12 +4875,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4886,8 +4892,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.unmanaged = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.unmanaged = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
@@ -4897,15 +4903,15 @@
           (0, decorator_utils_1.tagParameter)(target, targetKey, index, metadata);
         };
       }
-      exports.unmanaged = unmanaged;
+      exports2.unmanaged = unmanaged;
     }
   });
 
-  // node_modules/inversify/lib/annotation/multi_inject.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/multi_inject.js
   var require_multi_inject = __commonJS({
-    "node_modules/inversify/lib/annotation/multi_inject.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/multi_inject.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4916,12 +4922,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4933,20 +4939,20 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.multiInject = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.multiInject = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var inject_base_1 = require_inject_base();
       var multiInject = (0, inject_base_1.injectBase)(METADATA_KEY.MULTI_INJECT_TAG);
-      exports.multiInject = multiInject;
+      exports2.multiInject = multiInject;
     }
   });
 
-  // node_modules/inversify/lib/annotation/target_name.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/target_name.js
   var require_target_name = __commonJS({
-    "node_modules/inversify/lib/annotation/target_name.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/target_name.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -4957,12 +4963,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -4974,8 +4980,8 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.targetName = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.targetName = void 0;
       var METADATA_KEY = __importStar(require_metadata_keys());
       var metadata_1 = require_metadata();
       var decorator_utils_1 = require_decorator_utils();
@@ -4985,16 +4991,16 @@
           (0, decorator_utils_1.tagParameter)(target, targetKey, index, metadata);
         };
       }
-      exports.targetName = targetName;
+      exports2.targetName = targetName;
     }
   });
 
-  // node_modules/inversify/lib/annotation/property_event_decorator.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/property_event_decorator.js
   var require_property_event_decorator = __commonJS({
-    "node_modules/inversify/lib/annotation/property_event_decorator.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/property_event_decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.propertyEventDecorator = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.propertyEventDecorator = void 0;
       var metadata_1 = require_metadata();
       function propertyEventDecorator(eventKey, errorMessage) {
         return function() {
@@ -5007,15 +5013,15 @@
           };
         };
       }
-      exports.propertyEventDecorator = propertyEventDecorator;
+      exports2.propertyEventDecorator = propertyEventDecorator;
     }
   });
 
-  // node_modules/inversify/lib/annotation/post_construct.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/post_construct.js
   var require_post_construct = __commonJS({
-    "node_modules/inversify/lib/annotation/post_construct.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/post_construct.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -5026,12 +5032,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -5043,21 +5049,21 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.postConstruct = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.postConstruct = void 0;
       var ERRORS_MSGS = __importStar(require_error_msgs());
       var METADATA_KEY = __importStar(require_metadata_keys());
       var property_event_decorator_1 = require_property_event_decorator();
       var postConstruct = (0, property_event_decorator_1.propertyEventDecorator)(METADATA_KEY.POST_CONSTRUCT, ERRORS_MSGS.MULTIPLE_POST_CONSTRUCT_METHODS);
-      exports.postConstruct = postConstruct;
+      exports2.postConstruct = postConstruct;
     }
   });
 
-  // node_modules/inversify/lib/annotation/pre_destroy.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/pre_destroy.js
   var require_pre_destroy = __commonJS({
-    "node_modules/inversify/lib/annotation/pre_destroy.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/annotation/pre_destroy.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -5068,12 +5074,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -5085,35 +5091,35 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.preDestroy = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.preDestroy = void 0;
       var ERRORS_MSGS = __importStar(require_error_msgs());
       var METADATA_KEY = __importStar(require_metadata_keys());
       var property_event_decorator_1 = require_property_event_decorator();
       var preDestroy = (0, property_event_decorator_1.propertyEventDecorator)(METADATA_KEY.PRE_DESTROY, ERRORS_MSGS.MULTIPLE_PRE_DESTROY_METHODS);
-      exports.preDestroy = preDestroy;
+      exports2.preDestroy = preDestroy;
     }
   });
 
-  // node_modules/inversify/lib/interfaces/interfaces.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/interfaces/interfaces.js
   var require_interfaces = __commonJS({
-    "node_modules/inversify/lib/interfaces/interfaces.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/interfaces/interfaces.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.interfaces = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.interfaces = void 0;
       var interfaces;
       (function(interfaces2) {
         ;
       })(interfaces || (interfaces = {}));
-      exports.interfaces = interfaces;
+      exports2.interfaces = interfaces;
     }
   });
 
-  // node_modules/inversify/lib/inversify.js
+  // node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/inversify.js
   var require_inversify = __commonJS({
-    "node_modules/inversify/lib/inversify.js"(exports) {
+    "node_modules/.pnpm/inversify@6.0.2/node_modules/inversify/lib/inversify.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         Object.defineProperty(o, k2, { enumerable: true, get: function() {
@@ -5124,12 +5130,12 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __setModuleDefault = exports && exports.__setModuleDefault || (Object.create ? function(o, v) {
+      var __setModuleDefault = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
         Object.defineProperty(o, "default", { enumerable: true, value: v });
       } : function(o, v) {
         o["default"] = v;
       });
-      var __importStar = exports && exports.__importStar || function(mod) {
+      var __importStar = exports2 && exports2.__importStar || function(mod) {
         if (mod && mod.__esModule)
           return mod;
         var result = {};
@@ -5141,128 +5147,128 @@
         __setModuleDefault(result, mod);
         return result;
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.multiBindToService = exports.getServiceIdentifierAsString = exports.typeConstraint = exports.namedConstraint = exports.taggedConstraint = exports.traverseAncerstors = exports.decorate = exports.interfaces = exports.id = exports.MetadataReader = exports.preDestroy = exports.postConstruct = exports.targetName = exports.multiInject = exports.unmanaged = exports.optional = exports.LazyServiceIdentifer = exports.LazyServiceIdentifier = exports.inject = exports.named = exports.tagged = exports.injectable = exports.createTaggedDecorator = exports.ContainerModule = exports.AsyncContainerModule = exports.TargetTypeEnum = exports.BindingTypeEnum = exports.BindingScopeEnum = exports.Container = exports.METADATA_KEY = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.multiBindToService = exports2.getServiceIdentifierAsString = exports2.typeConstraint = exports2.namedConstraint = exports2.taggedConstraint = exports2.traverseAncerstors = exports2.decorate = exports2.interfaces = exports2.id = exports2.MetadataReader = exports2.preDestroy = exports2.postConstruct = exports2.targetName = exports2.multiInject = exports2.unmanaged = exports2.optional = exports2.LazyServiceIdentifer = exports2.LazyServiceIdentifier = exports2.inject = exports2.named = exports2.tagged = exports2.injectable = exports2.createTaggedDecorator = exports2.ContainerModule = exports2.AsyncContainerModule = exports2.TargetTypeEnum = exports2.BindingTypeEnum = exports2.BindingScopeEnum = exports2.Container = exports2.METADATA_KEY = void 0;
       var keys = __importStar(require_metadata_keys());
-      exports.METADATA_KEY = keys;
+      exports2.METADATA_KEY = keys;
       var container_1 = require_container();
-      Object.defineProperty(exports, "Container", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "Container", { enumerable: true, get: function() {
         return container_1.Container;
       } });
       var literal_types_1 = require_literal_types();
-      Object.defineProperty(exports, "BindingScopeEnum", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "BindingScopeEnum", { enumerable: true, get: function() {
         return literal_types_1.BindingScopeEnum;
       } });
-      Object.defineProperty(exports, "BindingTypeEnum", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "BindingTypeEnum", { enumerable: true, get: function() {
         return literal_types_1.BindingTypeEnum;
       } });
-      Object.defineProperty(exports, "TargetTypeEnum", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "TargetTypeEnum", { enumerable: true, get: function() {
         return literal_types_1.TargetTypeEnum;
       } });
       var container_module_1 = require_container_module();
-      Object.defineProperty(exports, "AsyncContainerModule", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "AsyncContainerModule", { enumerable: true, get: function() {
         return container_module_1.AsyncContainerModule;
       } });
-      Object.defineProperty(exports, "ContainerModule", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "ContainerModule", { enumerable: true, get: function() {
         return container_module_1.ContainerModule;
       } });
       var decorator_utils_1 = require_decorator_utils();
-      Object.defineProperty(exports, "createTaggedDecorator", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "createTaggedDecorator", { enumerable: true, get: function() {
         return decorator_utils_1.createTaggedDecorator;
       } });
       var injectable_1 = require_injectable();
-      Object.defineProperty(exports, "injectable", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "injectable", { enumerable: true, get: function() {
         return injectable_1.injectable;
       } });
       var tagged_1 = require_tagged();
-      Object.defineProperty(exports, "tagged", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "tagged", { enumerable: true, get: function() {
         return tagged_1.tagged;
       } });
       var named_1 = require_named();
-      Object.defineProperty(exports, "named", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "named", { enumerable: true, get: function() {
         return named_1.named;
       } });
       var inject_1 = require_inject();
-      Object.defineProperty(exports, "inject", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "inject", { enumerable: true, get: function() {
         return inject_1.inject;
       } });
       var lazy_service_identifier_1 = require_lazy_service_identifier();
-      Object.defineProperty(exports, "LazyServiceIdentifier", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "LazyServiceIdentifier", { enumerable: true, get: function() {
         return lazy_service_identifier_1.LazyServiceIdentifier;
       } });
       var lazy_service_identifier_2 = require_lazy_service_identifier();
-      Object.defineProperty(exports, "LazyServiceIdentifer", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "LazyServiceIdentifer", { enumerable: true, get: function() {
         return lazy_service_identifier_2.LazyServiceIdentifier;
       } });
       var optional_1 = require_optional();
-      Object.defineProperty(exports, "optional", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "optional", { enumerable: true, get: function() {
         return optional_1.optional;
       } });
       var unmanaged_1 = require_unmanaged();
-      Object.defineProperty(exports, "unmanaged", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "unmanaged", { enumerable: true, get: function() {
         return unmanaged_1.unmanaged;
       } });
       var multi_inject_1 = require_multi_inject();
-      Object.defineProperty(exports, "multiInject", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "multiInject", { enumerable: true, get: function() {
         return multi_inject_1.multiInject;
       } });
       var target_name_1 = require_target_name();
-      Object.defineProperty(exports, "targetName", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "targetName", { enumerable: true, get: function() {
         return target_name_1.targetName;
       } });
       var post_construct_1 = require_post_construct();
-      Object.defineProperty(exports, "postConstruct", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "postConstruct", { enumerable: true, get: function() {
         return post_construct_1.postConstruct;
       } });
       var pre_destroy_1 = require_pre_destroy();
-      Object.defineProperty(exports, "preDestroy", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "preDestroy", { enumerable: true, get: function() {
         return pre_destroy_1.preDestroy;
       } });
       var metadata_reader_1 = require_metadata_reader();
-      Object.defineProperty(exports, "MetadataReader", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "MetadataReader", { enumerable: true, get: function() {
         return metadata_reader_1.MetadataReader;
       } });
       var id_1 = require_id();
-      Object.defineProperty(exports, "id", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "id", { enumerable: true, get: function() {
         return id_1.id;
       } });
       var interfaces_1 = require_interfaces();
-      Object.defineProperty(exports, "interfaces", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "interfaces", { enumerable: true, get: function() {
         return interfaces_1.interfaces;
       } });
       var decorator_utils_2 = require_decorator_utils();
-      Object.defineProperty(exports, "decorate", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "decorate", { enumerable: true, get: function() {
         return decorator_utils_2.decorate;
       } });
       var constraint_helpers_1 = require_constraint_helpers();
-      Object.defineProperty(exports, "traverseAncerstors", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "traverseAncerstors", { enumerable: true, get: function() {
         return constraint_helpers_1.traverseAncerstors;
       } });
-      Object.defineProperty(exports, "taggedConstraint", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "taggedConstraint", { enumerable: true, get: function() {
         return constraint_helpers_1.taggedConstraint;
       } });
-      Object.defineProperty(exports, "namedConstraint", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "namedConstraint", { enumerable: true, get: function() {
         return constraint_helpers_1.namedConstraint;
       } });
-      Object.defineProperty(exports, "typeConstraint", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "typeConstraint", { enumerable: true, get: function() {
         return constraint_helpers_1.typeConstraint;
       } });
       var serialization_1 = require_serialization();
-      Object.defineProperty(exports, "getServiceIdentifierAsString", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "getServiceIdentifierAsString", { enumerable: true, get: function() {
         return serialization_1.getServiceIdentifierAsString;
       } });
       var binding_utils_1 = require_binding_utils();
-      Object.defineProperty(exports, "multiBindToService", { enumerable: true, get: function() {
+      Object.defineProperty(exports2, "multiBindToService", { enumerable: true, get: function() {
         return binding_utils_1.multiBindToService;
       } });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/container/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/container/index.js
   var require_container2 = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/container/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/container/index.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
       var const_1 = require_const();
       var inversify_1 = require_inversify();
       var getContainer = () => {
@@ -5279,61 +5285,61 @@
         return c;
       };
       var container = getContainer();
-      exports.default = container;
+      exports2.default = container;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/helpers/create-net-event-parameter.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/create-net-event-parameter.js
   var require_create_net_event_parameter = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/helpers/create-net-event-parameter.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/create-net-event-parameter.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.createNetEventParameter = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.createNetEventParameter = void 0;
       var const_1 = require_const();
       var createNetEventParameter = (fn) => (target, propertyKey, parameterIndex) => {
         const metadata = Reflect.getMetadata(const_1.PARAMETER, target, propertyKey) || [];
         metadata[parameterIndex] = fn;
         Reflect.defineMetadata(const_1.PARAMETER, metadata, target, propertyKey);
       };
-      exports.createNetEventParameter = createNetEventParameter;
+      exports2.createNetEventParameter = createNetEventParameter;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/helpers/extend-array-metadata.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/extend-array-metadata.js
   var require_extend_array_metadata = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/helpers/extend-array-metadata.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/extend-array-metadata.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.extendArrayMetadata = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.extendArrayMetadata = void 0;
       var extendArrayMetadata = (key, target, value, propertyKey) => {
         const metadata = Reflect.getMetadata(key, target, propertyKey) || [];
         metadata.push(value);
         Reflect.defineMetadata(key, metadata, target, propertyKey);
       };
-      exports.extendArrayMetadata = extendArrayMetadata;
+      exports2.extendArrayMetadata = extendArrayMetadata;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/helpers/extract-metadata.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/extract-metadata.js
   var require_extract_metadata = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/helpers/extract-metadata.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/extract-metadata.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.extractMetadata = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.extractMetadata = void 0;
       var extractMetadata = (key, target) => {
         const metadata = Reflect.getMetadata(key, target);
         Reflect.deleteMetadata(key, target);
         return metadata;
       };
-      exports.extractMetadata = extractMetadata;
+      exports2.extractMetadata = extractMetadata;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/helpers/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/index.js
   var require_helpers = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/helpers/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/helpers/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -5348,21 +5354,21 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_create_net_event_parameter(), exports);
-      __exportStar(require_extend_array_metadata(), exports);
-      __exportStar(require_extract_metadata(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_create_net_event_parameter(), exports2);
+      __exportStar(require_extend_array_metadata(), exports2);
+      __exportStar(require_extract_metadata(), exports2);
     }
   });
 
-  // node_modules/eventemitter2/lib/eventemitter2.js
+  // node_modules/.pnpm/eventemitter2@6.4.9/node_modules/eventemitter2/lib/eventemitter2.js
   var require_eventemitter2 = __commonJS({
-    "node_modules/eventemitter2/lib/eventemitter2.js"(exports, module) {
+    "node_modules/.pnpm/eventemitter2@6.4.9/node_modules/eventemitter2/lib/eventemitter2.js"(exports2, module) {
       !function(undefined2) {
         var hasOwnProperty = Object.hasOwnProperty;
         var isArray = Array.isArray ? Array.isArray : function _isArray(obj) {
@@ -6695,7 +6701,7 @@
           define(function() {
             return EventEmitter;
           });
-        } else if (typeof exports === "object") {
+        } else if (typeof exports2 === "object") {
           module.exports = EventEmitter;
         } else {
           var _global = new Function("", "return this")();
@@ -6705,24 +6711,24 @@
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/utils/event-emitter.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/utils/event-emitter.js
   var require_event_emitter = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/utils/event-emitter.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/utils/event-emitter.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.eventEmitter = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.eventEmitter = void 0;
       var eventemitter2_1 = require_eventemitter2();
       var container_1 = require_container2();
-      exports.eventEmitter = new eventemitter2_1.EventEmitter2();
-      container_1.default.bind(eventemitter2_1.EventEmitter2).toDynamicValue(() => exports.eventEmitter);
+      exports2.eventEmitter = new eventemitter2_1.EventEmitter2();
+      container_1.default.bind(eventemitter2_1.EventEmitter2).toDynamicValue(() => exports2.eventEmitter);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/utils/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/utils/index.js
   var require_utils = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/utils/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/utils/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -6737,22 +6743,22 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_event_emitter(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_event_emitter(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/enums/console-color.enum.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/enums/console-color.enum.js
   var require_console_color_enum = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/enums/console-color.enum.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/enums/console-color.enum.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ConsoleColor = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ConsoleColor = void 0;
       var ConsoleColor;
       (function(ConsoleColor2) {
         ConsoleColor2["White"] = "^0";
@@ -6765,15 +6771,15 @@
         ConsoleColor2["White2"] = "^7";
         ConsoleColor2["Orange"] = "^8";
         ConsoleColor2["Grey"] = "^9";
-      })(ConsoleColor = exports.ConsoleColor || (exports.ConsoleColor = {}));
+      })(ConsoleColor = exports2.ConsoleColor || (exports2.ConsoleColor = {}));
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/enums/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/enums/index.js
   var require_enums = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/enums/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/enums/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -6788,21 +6794,21 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_console_color_enum(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_console_color_enum(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/application/app.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/application/app.js
   var require_app = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/application/app.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/application/app.js"(exports2) {
       "use strict";
-      var __awaiter = exports && exports.__awaiter || function(thisArg, _arguments, P, generator) {
+      var __awaiter = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
         function adopt(value) {
           return value instanceof P ? value : new P(function(resolve) {
             resolve(value);
@@ -6829,8 +6835,8 @@
           step((generator = generator.apply(thisArg, _arguments || [])).next());
         });
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.App = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.App = void 0;
       var container_1 = require_container2();
       var const_1 = require_const();
       var helpers_1 = require_helpers();
@@ -6840,6 +6846,7 @@
         constructor() {
           this.controllers = /* @__PURE__ */ new Set();
           this.devMode = GetConvar("env", "production") !== "production";
+          this.chatCommands = [];
           this.processGuard = (g) => {
             var _a;
             if (typeof g === "function") {
@@ -6895,6 +6902,23 @@
                 console.log(`${enums_1.ConsoleColor.Yellow}[DEV MODE]${enums_1.ConsoleColor.White}:${enums_1.ConsoleColor.Red}False${enums_1.ConsoleColor.White}`);
               }
             }, true);
+            if (IsDuplicityVersion()) {
+              onNet("chat:init", () => {
+                emitNet("chat:addSuggestions", source, this.chatCommands);
+              });
+              on("chat:addSuggestion", (command, description, params) => {
+                if (!description)
+                  description = "";
+                if (!params)
+                  params = [];
+                this.chatCommands = this.chatCommands.filter((c) => c.name !== `/${command}`);
+                this.chatCommands.push({
+                  name: `/${command}`,
+                  help: description,
+                  params
+                });
+              });
+            }
             console.log("[ORP][Core]APP Started");
           });
         }
@@ -6933,11 +6957,20 @@
           const metadata = (0, helpers_1.extractMetadata)(const_1.NET_EVENT, controller) || [];
           metadata.forEach(({ name, propertyKey }) => {
             console.log(`NetEvents: ${name}`);
-            onNet(name, (...args) => {
-              if (this.devMode)
-                console.log(`NetEvents:${enums_1.ConsoleColor.Green}${name}${enums_1.ConsoleColor.White}`, `Source: ${enums_1.ConsoleColor.Red}${source}${enums_1.ConsoleColor.White}`, `Args: ${enums_1.ConsoleColor.Yellow}`, ...args, `${enums_1.ConsoleColor.White}`);
-              controller[propertyKey](...args);
-            });
+            if (IsDuplicityVersion()) {
+              onNet(name, (...args) => {
+                const _source = String(source);
+                if (this.devMode)
+                  console.log(`NetEvents:${enums_1.ConsoleColor.Green}${name}${enums_1.ConsoleColor.White}`, `Source: ${enums_1.ConsoleColor.Red}${_source}${enums_1.ConsoleColor.White}`, `Args: ${enums_1.ConsoleColor.Yellow}`, ...args, `${enums_1.ConsoleColor.White}`);
+                controller[propertyKey](_source, ...args);
+              });
+            } else {
+              onNet(name, (...args) => {
+                if (this.devMode)
+                  console.log(`NetEvents:${enums_1.ConsoleColor.Green}${name}${enums_1.ConsoleColor.White}`, `Args: ${enums_1.ConsoleColor.Yellow}`, ...args, `${enums_1.ConsoleColor.White}`);
+                controller[propertyKey](...args);
+              });
+            }
           });
         }
         initNuis(controller) {
@@ -6952,11 +6985,11 @@
           metadata.forEach(({ name, propertyKey }) => {
             console.log(`CallbackEvents: ${name}`);
             onNet(`_server_callback:${name}`, (...args) => __awaiter(this, void 0, void 0, function* () {
+              const _source = String(source);
               if (this.devMode)
                 console.log(`CallbackEvents:${enums_1.ConsoleColor.Green}${name}${enums_1.ConsoleColor.White}`, `Source: ${enums_1.ConsoleColor.Red}${source}${enums_1.ConsoleColor.White}`, `Args: ${enums_1.ConsoleColor.Yellow}`, ...args, `${enums_1.ConsoleColor.White}`);
-              const _source = String(source);
               try {
-                const response = yield controller[propertyKey](...args);
+                const response = yield controller[propertyKey](_source, ...args);
                 emitNet(`_server_response:${name}:${_source}`, _source, response);
               } catch (error) {
                 console.error(error);
@@ -7089,24 +7122,27 @@
               }
               yield controller[propertyKey](...context.args);
             }), false);
-            setTimeout(() => {
-              emit("chat:addSuggestion", `/${command}`, description, params);
-            }, 1e3);
+            this.chatCommands = this.chatCommands.filter((c) => c.name !== `/${command}`);
+            this.chatCommands.push({
+              name: `/${command}`,
+              help: description || "",
+              params: params || []
+            });
             if (IsDuplicityVersion()) {
               emitNet("chat:addSuggestion", -1, `/${command}`, description, params);
             }
           });
         }
       };
-      exports.App = App2;
+      exports2.App = App2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/application/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/application/index.js
   var require_application = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/application/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/application/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7121,25 +7157,25 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_app(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_app(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/di/injectable.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/injectable.decorator.js
   var require_injectable_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/di/injectable.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/injectable.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Injectable = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Injectable = void 0;
       var inversify_1 = require_inversify();
       var container_1 = require_container2();
-      var Injectable = (token) => (target) => {
+      var Injectable2 = (token) => (target) => {
         (0, inversify_1.decorate)((0, inversify_1.injectable)(), target);
         container_1.default.bind(token || target).to(target).inSingletonScope();
         container_1.default.bind(`${target.name}Factory`).toFactory((context) => {
@@ -7148,16 +7184,16 @@
           };
         });
       };
-      exports.Injectable = Injectable;
+      exports2.Injectable = Injectable2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/classes/controller.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/classes/controller.decorator.js
   var require_controller_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/classes/controller.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/classes/controller.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Controller = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Controller = void 0;
       var const_1 = require_const();
       var injectable_decorator_1 = require_injectable_decorator();
       var Controller2 = (name) => (target) => {
@@ -7165,15 +7201,15 @@
         Reflect.defineMetadata(const_1.CONTROLLER, name, target.prototype);
         Reflect.decorate([(0, injectable_decorator_1.Injectable)()], target);
       };
-      exports.Controller = Controller2;
+      exports2.Controller = Controller2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/classes/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/classes/index.js
   var require_classes = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/classes/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/classes/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7188,32 +7224,32 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_controller_decorator(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_controller_decorator(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/di/inject.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/inject.decorator.js
   var require_inject_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/di/inject.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/inject.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Inject = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Inject = void 0;
       var inversify_1 = require_inversify();
-      exports.Inject = inversify_1.inject;
+      exports2.Inject = inversify_1.inject;
     }
   });
 
-  // node_modules/inversify-inject-decorators/lib/decorators.js
+  // node_modules/.pnpm/inversify-inject-decorators@3.1.0/node_modules/inversify-inject-decorators/lib/decorators.js
   var require_decorators = __commonJS({
-    "node_modules/inversify-inject-decorators/lib/decorators.js"(exports) {
+    "node_modules/.pnpm/inversify-inject-decorators@3.1.0/node_modules/inversify-inject-decorators/lib/decorators.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
       var INJECTION = Symbol.for("INJECTION");
       function _proxyGetter(proto, key, resolve, doCache) {
         function getter() {
@@ -7246,7 +7282,7 @@
           };
         };
       }
-      exports.makePropertyInjectDecorator = makePropertyInjectDecorator;
+      exports2.makePropertyInjectDecorator = makePropertyInjectDecorator;
       function makePropertyInjectNamedDecorator(container, doCache) {
         return function(serviceIdentifier, named) {
           return function(proto, key) {
@@ -7257,7 +7293,7 @@
           };
         };
       }
-      exports.makePropertyInjectNamedDecorator = makePropertyInjectNamedDecorator;
+      exports2.makePropertyInjectNamedDecorator = makePropertyInjectNamedDecorator;
       function makePropertyInjectTaggedDecorator(container, doCache) {
         return function(serviceIdentifier, key, value) {
           return function(proto, propertyName) {
@@ -7268,7 +7304,7 @@
           };
         };
       }
-      exports.makePropertyInjectTaggedDecorator = makePropertyInjectTaggedDecorator;
+      exports2.makePropertyInjectTaggedDecorator = makePropertyInjectTaggedDecorator;
       function makePropertyMultiInjectDecorator(container, doCache) {
         return function(serviceIdentifier) {
           return function(proto, key) {
@@ -7279,15 +7315,15 @@
           };
         };
       }
-      exports.makePropertyMultiInjectDecorator = makePropertyMultiInjectDecorator;
+      exports2.makePropertyMultiInjectDecorator = makePropertyMultiInjectDecorator;
     }
   });
 
-  // node_modules/inversify-inject-decorators/lib/index.js
+  // node_modules/.pnpm/inversify-inject-decorators@3.1.0/node_modules/inversify-inject-decorators/lib/index.js
   var require_lib = __commonJS({
-    "node_modules/inversify-inject-decorators/lib/index.js"(exports) {
+    "node_modules/.pnpm/inversify-inject-decorators@3.1.0/node_modules/inversify-inject-decorators/lib/index.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
       var decorators_1 = require_decorators();
       function getDecorators(container, doCache) {
         if (doCache === void 0) {
@@ -7304,30 +7340,30 @@
           lazyMultiInject
         };
       }
-      exports.default = getDecorators;
+      exports2.default = getDecorators;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/di/lazyInject.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/lazyInject.decorator.js
   var require_lazyInject_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/di/lazyInject.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/lazyInject.decorator.js"(exports2) {
       "use strict";
       var _a;
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.lazyServiceIdentifer = exports.lazyMultiInject = exports.lazyInjectTagged = exports.lazyInjectNamed = exports.lazyInject = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.lazyServiceIdentifer = exports2.lazyMultiInject = exports2.lazyInjectTagged = exports2.lazyInjectNamed = exports2.lazyInject = void 0;
       var container_1 = require_container2();
       var inversify_inject_decorators_1 = require_lib();
       var inversify_1 = require_inversify();
-      _a = (0, inversify_inject_decorators_1.default)(container_1.default), exports.lazyInject = _a.lazyInject, exports.lazyInjectNamed = _a.lazyInjectNamed, exports.lazyInjectTagged = _a.lazyInjectTagged, exports.lazyMultiInject = _a.lazyMultiInject;
-      exports.lazyServiceIdentifer = inversify_1.LazyServiceIdentifer;
+      _a = (0, inversify_inject_decorators_1.default)(container_1.default), exports2.lazyInject = _a.lazyInject, exports2.lazyInjectNamed = _a.lazyInjectNamed, exports2.lazyInjectTagged = _a.lazyInjectTagged, exports2.lazyMultiInject = _a.lazyMultiInject;
+      exports2.lazyServiceIdentifer = inversify_1.LazyServiceIdentifer;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/di/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/index.js
   var require_di = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/di/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/di/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7342,27 +7378,27 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_injectable_decorator(), exports);
-      __exportStar(require_inject_decorator(), exports);
-      __exportStar(require_lazyInject_decorator(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_injectable_decorator(), exports2);
+      __exportStar(require_inject_decorator(), exports2);
+      __exportStar(require_lazyInject_decorator(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/chat-command.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/chat-command.decorator.js
   var require_chat_command_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/chat-command.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/chat-command.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ChatCommand = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ChatCommand = void 0;
       var helpers_1 = require_helpers();
       var metadata_keys_constant_1 = require_metadata_keys_constant();
-      var ChatCommand = (command, description, params) => (target, propertyKey) => {
+      var ChatCommand2 = (command, description, params) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(metadata_keys_constant_1.CHAT_COMMAND, target, {
           command,
           propertyKey,
@@ -7370,31 +7406,31 @@
           params
         });
       };
-      exports.ChatCommand = ChatCommand;
+      exports2.ChatCommand = ChatCommand2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/event.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/event.decorator.js
   var require_event_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/event.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/event.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Event = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Event = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
-      var Event = (name) => (target, propertyKey) => {
+      var Event2 = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.EVENT, target, { name, propertyKey });
       };
-      exports.Event = Event;
+      exports2.Event = Event2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/export-callback.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/export-callback.decorator.js
   var require_export_callback_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/export-callback.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/export-callback.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.ExportCallback = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.ExportCallback = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var ExportCallback = (resource, method, ...args) => (target, propertyKey) => {
@@ -7405,76 +7441,76 @@
           propertyKey
         });
       };
-      exports.ExportCallback = ExportCallback;
+      exports2.ExportCallback = ExportCallback;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/export.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/export.decorator.js
   var require_export_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/export.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/export.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Export = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Export = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var Export = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.EXPORT, target, { name, propertyKey });
       };
-      exports.Export = Export;
+      exports2.Export = Export;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/local-event.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/local-event.decorator.js
   var require_local_event_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/local-event.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/local-event.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.LocalEvent = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.LocalEvent = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var LocalEvent = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.LOCAL_EVENT, target, { name, propertyKey });
       };
-      exports.LocalEvent = LocalEvent;
+      exports2.LocalEvent = LocalEvent;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/net-event.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/net-event.decorator.js
   var require_net_event_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/net-event.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/net-event.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.NetEvent = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.NetEvent = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var NetEvent = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.NET_EVENT, target, { name, propertyKey });
       };
-      exports.NetEvent = NetEvent;
+      exports2.NetEvent = NetEvent;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/net-callback.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/net-callback.decorator.js
   var require_net_callback_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/net-callback.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/net-callback.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.NetCallback = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.NetCallback = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var NetCallback = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.NET_CALLBACK, target, { name, propertyKey });
       };
-      exports.NetCallback = NetCallback;
+      exports2.NetCallback = NetCallback;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/tick.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/tick.decorator.js
   var require_tick_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/tick.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/tick.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Tick = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Tick = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var Tick = (interval = 0) => (target, propertyKey) => {
@@ -7483,46 +7519,46 @@
         }
         (0, helpers_1.extendArrayMetadata)(const_1.TICK, target, { interval, propertyKey });
       };
-      exports.Tick = Tick;
+      exports2.Tick = Tick;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/lazyInject.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/lazyInject.decorator.js
   var require_lazyInject_decorator2 = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/lazyInject.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/lazyInject.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.LazyInject = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.LazyInject = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var LazyInject = (c) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.LAZYINJECT, target, { c, propertyKey });
       };
-      exports.LazyInject = LazyInject;
+      exports2.LazyInject = LazyInject;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/tunnel.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/tunnel.decorator.js
   var require_tunnel_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/tunnel.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/tunnel.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.Tunnel = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.Tunnel = void 0;
       var const_1 = require_const();
       var helpers_1 = require_helpers();
       var Tunnel = () => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.TUNNEL, target, { propertyKey });
       };
-      exports.Tunnel = Tunnel;
+      exports2.Tunnel = Tunnel;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/onready.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/onready.decorator.js
   var require_onready_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/onready.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/onready.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.OnReady = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.OnReady = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var OnReady = (delay = 0) => (target, propertyKey) => {
@@ -7531,30 +7567,30 @@
         }
         (0, helpers_1.extendArrayMetadata)(const_1.ONREADY, target, { delay, propertyKey });
       };
-      exports.OnReady = OnReady;
+      exports2.OnReady = OnReady;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/nui.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/nui.decorator.js
   var require_nui_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/nui.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/nui.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.NuiHandler = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.NuiHandler = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
-      var NuiHandler = (name) => (target, propertyKey) => {
+      var NuiHandler2 = (name) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.NUI, target, { name, propertyKey });
       };
-      exports.NuiHandler = NuiHandler;
+      exports2.NuiHandler = NuiHandler2;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/events/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/index.js
   var require_events = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/events/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/events/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7569,47 +7605,47 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_chat_command_decorator(), exports);
-      __exportStar(require_event_decorator(), exports);
-      __exportStar(require_export_callback_decorator(), exports);
-      __exportStar(require_export_decorator(), exports);
-      __exportStar(require_local_event_decorator(), exports);
-      __exportStar(require_net_event_decorator(), exports);
-      __exportStar(require_net_callback_decorator(), exports);
-      __exportStar(require_tick_decorator(), exports);
-      __exportStar(require_lazyInject_decorator2(), exports);
-      __exportStar(require_tunnel_decorator(), exports);
-      __exportStar(require_onready_decorator(), exports);
-      __exportStar(require_nui_decorator(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_chat_command_decorator(), exports2);
+      __exportStar(require_event_decorator(), exports2);
+      __exportStar(require_export_callback_decorator(), exports2);
+      __exportStar(require_export_decorator(), exports2);
+      __exportStar(require_local_event_decorator(), exports2);
+      __exportStar(require_net_event_decorator(), exports2);
+      __exportStar(require_net_callback_decorator(), exports2);
+      __exportStar(require_tick_decorator(), exports2);
+      __exportStar(require_lazyInject_decorator2(), exports2);
+      __exportStar(require_tunnel_decorator(), exports2);
+      __exportStar(require_onready_decorator(), exports2);
+      __exportStar(require_nui_decorator(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/guards/use-guard.decorator.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/guards/use-guard.decorator.js
   var require_use_guard_decorator = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/guards/use-guard.decorator.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/guards/use-guard.decorator.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
-      exports.UseGuard = void 0;
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      exports2.UseGuard = void 0;
       var helpers_1 = require_helpers();
       var const_1 = require_const();
       var UseGuard = (guard) => (target, propertyKey) => {
         (0, helpers_1.extendArrayMetadata)(const_1.GUARD, target, guard, propertyKey);
       };
-      exports.UseGuard = UseGuard;
+      exports2.UseGuard = UseGuard;
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/guards/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/guards/index.js
   var require_guards = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/guards/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/guards/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7624,21 +7660,21 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_use_guard_decorator(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_use_guard_decorator(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/decorators/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/index.js
   var require_decorators2 = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/decorators/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/decorators/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7653,33 +7689,33 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_classes(), exports);
-      __exportStar(require_di(), exports);
-      __exportStar(require_events(), exports);
-      __exportStar(require_helpers(), exports);
-      __exportStar(require_guards(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_classes(), exports2);
+      __exportStar(require_di(), exports2);
+      __exportStar(require_events(), exports2);
+      __exportStar(require_helpers(), exports2);
+      __exportStar(require_guards(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/interfaces/guard.interface.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/interfaces/guard.interface.js
   var require_guard_interface = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/interfaces/guard.interface.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/interfaces/guard.interface.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/interfaces/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/interfaces/index.js
   var require_interfaces2 = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/interfaces/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/interfaces/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7694,93 +7730,93 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_guard_interface(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_guard_interface(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/app-create.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/app-create.type.js
   var require_app_create_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/app-create.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/app-create.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/app-option.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/app-option.type.js
   var require_app_option_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/app-option.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/app-option.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/chat-command.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/chat-command.type.js
   var require_chat_command_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/chat-command.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/chat-command.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/controller.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/controller.type.js
   var require_controller_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/controller.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/controller.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/events.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/events.type.js
   var require_events_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/events.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/events.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/exec-context.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/exec-context.type.js
   var require_exec_context_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/exec-context.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/exec-context.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/exports.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/exports.type.js
   var require_exports_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/exports.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/exports.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/ticks.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/ticks.type.js
   var require_ticks_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/ticks.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/ticks.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/tunnel-events.type.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/tunnel-events.type.js
   var require_tunnel_events_type = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/tunnel-events.type.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/tunnel-events.type.js"(exports2) {
       "use strict";
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/types/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/index.js
   var require_types = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/types/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/types/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7795,29 +7831,29 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_app_create_type(), exports);
-      __exportStar(require_app_option_type(), exports);
-      __exportStar(require_chat_command_type(), exports);
-      __exportStar(require_controller_type(), exports);
-      __exportStar(require_events_type(), exports);
-      __exportStar(require_exec_context_type(), exports);
-      __exportStar(require_exports_type(), exports);
-      __exportStar(require_ticks_type(), exports);
-      __exportStar(require_tunnel_events_type(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_app_create_type(), exports2);
+      __exportStar(require_app_option_type(), exports2);
+      __exportStar(require_chat_command_type(), exports2);
+      __exportStar(require_controller_type(), exports2);
+      __exportStar(require_events_type(), exports2);
+      __exportStar(require_exec_context_type(), exports2);
+      __exportStar(require_exports_type(), exports2);
+      __exportStar(require_ticks_type(), exports2);
+      __exportStar(require_tunnel_events_type(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/core/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/index.js
   var require_core = __commonJS({
-    "node_modules/starboy-framework/dist/packages/core/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/core/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7832,27 +7868,27 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_application(), exports);
-      __exportStar(require_const(), exports);
-      __exportStar(require_container2(), exports);
-      __exportStar(require_decorators2(), exports);
-      __exportStar(require_interfaces2(), exports);
-      __exportStar(require_types(), exports);
-      __exportStar(require_utils(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_application(), exports2);
+      __exportStar(require_const(), exports2);
+      __exportStar(require_container2(), exports2);
+      __exportStar(require_decorators2(), exports2);
+      __exportStar(require_interfaces2(), exports2);
+      __exportStar(require_types(), exports2);
+      __exportStar(require_utils(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/packages/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/index.js
   var require_packages = __commonJS({
-    "node_modules/starboy-framework/dist/packages/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/packages/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7867,21 +7903,21 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
-      __exportStar(require_core(), exports);
+      Object.defineProperty(exports2, "__esModule", { value: true });
+      __exportStar(require_core(), exports2);
     }
   });
 
-  // node_modules/starboy-framework/dist/index.js
+  // node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/index.js
   var require_dist = __commonJS({
-    "node_modules/starboy-framework/dist/index.js"(exports) {
+    "node_modules/.pnpm/starboy-framework@1.2.8/node_modules/starboy-framework/dist/index.js"(exports2) {
       "use strict";
-      var __createBinding = exports && exports.__createBinding || (Object.create ? function(o, m, k, k2) {
+      var __createBinding = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
         if (k2 === void 0)
           k2 = k;
         var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -7896,22 +7932,22 @@
           k2 = k;
         o[k2] = m[k];
       });
-      var __exportStar = exports && exports.__exportStar || function(m, exports2) {
+      var __exportStar = exports2 && exports2.__exportStar || function(m, exports3) {
         for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports2, p))
-            __createBinding(exports2, m, p);
+          if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports3, p))
+            __createBinding(exports3, m, p);
       };
-      Object.defineProperty(exports, "__esModule", { value: true });
+      Object.defineProperty(exports2, "__esModule", { value: true });
       require_Reflect();
       require_mocks();
-      __exportStar(require_packages(), exports);
+      __exportStar(require_packages(), exports2);
     }
   });
 
-  // src/client/controllers/test.controller.ts
-  var import_starboy_framework = __toESM(require_dist());
+  // src/client/controllers/screenshot.controller.ts
+  var import_starboy_framework2 = __toESM(require_dist());
 
-  // ../../ProjectStarboy/node_modules/zod/lib/index.mjs
+  // ../../ProjectStarboy/node_modules/.pnpm/zod@3.21.4/node_modules/zod/lib/index.mjs
   var util;
   (function(util2) {
     util2.assertEqual = (val) => val;
@@ -11523,6 +11559,7 @@
       this.controllerName = "AppController";
       this.classType = "controller";
       this.controllerName = controllerName;
+      this.logInfo(`Controller ${controllerName} initialized`);
     }
     log(...args) {
       console.log(`^6[${this.controllerName}]`, ...args);
@@ -11538,6 +11575,29 @@
     }
     logWarning(...args) {
       console.log(`[^3WARNING^0]`, `[^6${this.controllerName}^0]`, ...args);
+    }
+  };
+  var AppService = class {
+    constructor(serviceName) {
+      this.serviceName = "AppService";
+      this.classType = "service";
+      this.serviceName = serviceName;
+      this.logInfo(`Service ${serviceName} initialized`);
+    }
+    log(...args) {
+      console.log(`^6[${this.serviceName}]`, ...args);
+    }
+    logInfo(...args) {
+      console.log(`[^5INFO^0]`, `[^6${this.serviceName}^0]`, ...args);
+    }
+    logSuccess(...args) {
+      console.log(`[^2SUCCESS^0]`, `[^6${this.serviceName}^0]`, ...args);
+    }
+    logError(...args) {
+      console.log(`[^1ERROR^0]`, `[^6${this.serviceName}^0]`, ...args);
+    }
+    logWarning(...args) {
+      console.log(`[^3WARNING^0]`, `[^6${this.serviceName}^0]`, ...args);
     }
   };
 
@@ -11594,9 +11654,31 @@
     "48",
     "49"
   ];
-  var ClotherSlot = ["HAT", "GLASS", "EAR", "WATCH", "BRACELET", "MASK", "TORSOR", "LEG", "BAG", "SHOES", "ACCESSORY", "UNDERSHIRT", "KEVLAR", "DECAL", "TOP"];
+  var ClotherSlot = [
+    "HAT",
+    "GLASS",
+    "EAR",
+    "WATCH",
+    "BRACELET",
+    "MASK",
+    "TORSOR",
+    "LEG",
+    "BAG",
+    "SHOES",
+    "ACCESSORY",
+    "UNDERSHIRT",
+    "KEVLAR",
+    "DECAL",
+    "TOP"
+  ];
   var InventorySlot = [...NormalSlot, ...ClotherSlot];
-  var ZInventoryType = z.union([z.literal("player"), z.literal("trunk"), z.literal("stash"), z.literal("faction"), z.literal("drop")]);
+  var ZInventoryType = z.union([
+    z.literal("player"),
+    z.literal("trunk"),
+    z.literal("stash"),
+    z.literal("faction"),
+    z.literal("drop")
+  ]);
 
   // ../../ProjectStarboy/src/shared/interfaces/nui.interface.ts
   var RarityColor = {
@@ -11624,20 +11706,1366 @@
     time: z.number().min(1).max(1e5)
   });
 
-  // src/client/controllers/test.controller.ts
-  var TestController = class extends AppController {
+  // src/client/utils/callback.ts
+  var SERVER_ID = GetPlayerServerId(PlayerId());
+  var emitCallback = async (eventName, ...args) => {
+    return new Promise((resolve, reject) => {
+      const eventCallback = (response) => {
+        clearTimeout(eventTimeOut);
+        removeEventListener(
+          `_server_response:${eventName}:${SERVER_ID}`,
+          eventCallback
+        );
+        resolve(response);
+      };
+      const eventTimeOut = setTimeout(() => {
+        removeEventListener(
+          `_server_response:${eventName}:${SERVER_ID}`,
+          eventCallback
+        );
+        console.log(`_server_response:${eventName}:${SERVER_ID} Timed out`);
+        reject("timeout");
+      }, 3e4);
+      onNet(`_server_response:${eventName}:${SERVER_ID}`, eventCallback);
+      emitNet(`_server_callback:${eventName}`, ...args);
+    });
+  };
+
+  // ../../ProjectStarboy/src/shared/utils/func.ts
+  var Sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms, null));
+
+  // src/client/services/screenshot.service.ts
+  var import_starboy_framework = __toESM(require_dist());
+  var headCam = {
+    camPos: [-1238.8529052734375, -3298.1806640625, 30.13855743408203],
+    camRot: [-6.44125509262085, 0, 0.42932191491127014],
+    camFov: 50
+  };
+  var bodyCam = {
+    camPos: [-1238.921142578125, -3299.453369140625, 29.91095733642578],
+    camRot: [-11.376350402832031, 5336084996088175e-23, -3.3868095874786377],
+    camFov: 50
+  };
+  var shoeCam = {
+    camPos: [-1239.6722412109375, -3297.575439453125, 28.562721252441406],
+    camRot: [-9.505410194396973, 0, -49.015228271484375],
+    camFov: 40
+  };
+  var legCam = {
+    camPos: [-1239.333984375, -3299.25537109375, 29.21949577331543],
+    camRot: [-9.215771675109863, -213443399843527e-21, -15.467365264892578],
+    camFov: 60
+  };
+  var Bones = {
+    FB_R_Brow_Out_000: 1356,
+    SKEL_L_Toe0: 2108,
+    MH_R_Elbow: 2992,
+    SKEL_L_Finger01: 4089,
+    SKEL_L_Finger02: 4090,
+    SKEL_L_Finger31: 4137,
+    SKEL_L_Finger32: 4138,
+    SKEL_L_Finger41: 4153,
+    SKEL_L_Finger42: 4154,
+    SKEL_L_Finger11: 4169,
+    SKEL_L_Finger12: 4170,
+    SKEL_L_Finger21: 4185,
+    SKEL_L_Finger22: 4186,
+    RB_L_ArmRoll: 5232,
+    IK_R_Hand: 6286,
+    RB_R_ThighRoll: 6442,
+    SKEL_R_Clavicle: 10706,
+    FB_R_Lip_Corner_000: 11174,
+    SKEL_Pelvis: 11816,
+    IK_Head: 12844,
+    SKEL_L_Foot: 14201,
+    MH_R_Knee: 16335,
+    FB_LowerLipRoot_000: 17188,
+    FB_R_Lip_Top_000: 17719,
+    SKEL_L_Hand: 18905,
+    FB_R_CheekBone_000: 19336,
+    FB_UpperLipRoot_000: 20178,
+    FB_L_Lip_Top_000: 20279,
+    FB_LowerLip_000: 20623,
+    SKEL_R_Toe0: 20781,
+    FB_L_CheekBone_000: 21550,
+    MH_L_Elbow: 22711,
+    SKEL_Spine0: 23553,
+    RB_L_ThighRoll: 23639,
+    PH_R_Foot: 24806,
+    SKEL_Spine1: 24816,
+    SKEL_Spine2: 24817,
+    SKEL_Spine3: 24818,
+    FB_L_Eye_000: 25260,
+    SKEL_L_Finger00: 26610,
+    SKEL_L_Finger10: 26611,
+    SKEL_L_Finger20: 26612,
+    SKEL_L_Finger30: 26613,
+    SKEL_L_Finger40: 26614,
+    FB_R_Eye_000: 27474,
+    SKEL_R_Forearm: 28252,
+    PH_R_Hand: 28422,
+    FB_L_Lip_Corner_000: 29868,
+    SKEL_Head: 31086,
+    IK_R_Foot: 35502,
+    RB_Neck_1: 35731,
+    IK_L_Hand: 36029,
+    SKEL_R_Calf: 36864,
+    RB_R_ArmRoll: 37119,
+    FB_Brow_Centre_000: 37193,
+    SKEL_Neck_1: 39317,
+    SKEL_R_UpperArm: 40269,
+    FB_R_Lid_Upper_000: 43536,
+    RB_R_ForeArmRoll: 43810,
+    SKEL_L_UpperArm: 45509,
+    FB_L_Lid_Upper_000: 45750,
+    MH_L_Knee: 46078,
+    FB_Jaw_000: 46240,
+    FB_L_Lip_Bot_000: 47419,
+    FB_Tongue_000: 47495,
+    FB_R_Lip_Bot_000: 49979,
+    SKEL_R_Thigh: 51826,
+    SKEL_R_Foot: 52301,
+    IK_Root: 56604,
+    SKEL_R_Hand: 57005,
+    SKEL_Spine_Root: 57597,
+    PH_L_Foot: 57717,
+    SKEL_L_Thigh: 58271,
+    FB_L_Brow_Out_000: 58331,
+    SKEL_R_Finger00: 58866,
+    SKEL_R_Finger10: 58867,
+    SKEL_R_Finger20: 58868,
+    SKEL_R_Finger30: 58869,
+    SKEL_R_Finger40: 58870,
+    PH_L_Hand: 60309,
+    RB_L_ForeArmRoll: 61007,
+    SKEL_L_Forearm: 61163,
+    FB_UpperLip_000: 61839,
+    SKEL_L_Calf: 63931,
+    SKEL_R_Finger01: 64016,
+    SKEL_R_Finger02: 64017,
+    SKEL_R_Finger31: 64064,
+    SKEL_R_Finger32: 64065,
+    SKEL_R_Finger41: 64080,
+    SKEL_R_Finger42: 64081,
+    SKEL_R_Finger11: 64096,
+    SKEL_R_Finger12: 64097,
+    SKEL_R_Finger21: 64112,
+    SKEL_R_Finger22: 64113,
+    SKEL_L_Clavicle: 64729,
+    FACIAL_facialRoot: 65068,
+    IK_L_Foot: 65245
+  };
+  var ScreenCoords = [-1238.91064453125, -3296.92822265625, 13.940055847167969];
+  var ScreenshotService = class extends AppService {
     constructor() {
-      super("TestController");
+      super("ScreenshotService");
+      __publicField(this, "greenscreenEntity");
+      __publicField(this, "camera");
+      __publicField(this, "lastPosition");
+      __publicField(this, "spawnedVehicle");
+    }
+    async prepareGreenscreen() {
+      ClearOverrideWeather();
+      ClearWeatherTypePersist();
+      SetWeatherTypePersist("CLEAR");
+      SetWeatherTypeNow("CLEAR");
+      NetworkOverrideClockTime(12, 0, 0);
+      PauseClock(true);
+      await Sleep(2e3);
+      const playerPed = PlayerPedId();
+      this.lastPosition = GetEntityCoords(playerPed, true);
+      emitNet("screenshot:switchBucket");
+      DisplayRadar(false);
+      exports["ProjectStarboy"].ExportController_ExecuteService(
+        "PlayernameService",
+        "toggle",
+        false
+      );
+      RequestCollisionAtCoord(ScreenCoords[0], ScreenCoords[1], ScreenCoords[2]);
+      SetEntityCoords(
+        playerPed,
+        ScreenCoords[0],
+        ScreenCoords[1],
+        ScreenCoords[2],
+        true,
+        false,
+        false,
+        true
+      );
+      while (!HasCollisionLoadedAroundEntity(playerPed)) {
+        await Sleep(1);
+      }
+      const modelHash = GetHashKey("prop_big_cin_screen");
+      RequestModel(modelHash);
+      while (!HasModelLoaded(modelHash)) {
+        await Sleep(1);
+      }
+      if (this.greenscreenEntity) {
+        DeleteEntity(this.greenscreenEntity);
+      }
+      if (this.camera) {
+        DestroyCam(this.camera, false);
+      }
+      this.greenscreenEntity = CreateObject(
+        modelHash,
+        ScreenCoords[0],
+        ScreenCoords[1],
+        ScreenCoords[2],
+        false,
+        false,
+        false
+      );
+      SetEntityHeading(this.greenscreenEntity, 0);
+      FreezeEntityPosition(this.greenscreenEntity, true);
+      FreezeEntityPosition(playerPed, true);
+      this.camera = CreateCamWithParams(
+        "DEFAULT_SCRIPTED_CAMERA",
+        ScreenCoords[0],
+        ScreenCoords[1],
+        ScreenCoords[2] + 10,
+        0,
+        0,
+        0,
+        60,
+        true,
+        2
+      );
+      SetCamActive(this.camera, true);
+      RenderScriptCams(true, false, 0, true, false);
+    }
+    setVehicleProperties(vehicle, props) {
+      this.logInfo(props);
+      this.logInfo(vehicle);
+      this.logInfo(DoesEntityExist(vehicle));
+      if (!DoesEntityExist(vehicle))
+        return;
+      ClearVehicleCustomPrimaryColour(vehicle);
+      ClearVehicleCustomSecondaryColour(vehicle);
+      SetVehicleModKit(vehicle, 0);
+      if (props.wheels) {
+        SetVehicleWheelType(vehicle, props.wheels);
+      }
+      if (props.health) {
+        SetVehicleBodyHealth(vehicle, props.health + 0);
+      }
+      if (props.colorPrimary) {
+        const [, colorSecondary] = GetVehicleColours(vehicle);
+        SetVehicleColours(vehicle, props.colorPrimary, colorSecondary);
+      }
+      if (props.colorSecondary) {
+        const [colorPrimary] = GetVehicleColours(vehicle);
+        SetVehicleColours(vehicle, colorPrimary, props.colorSecondary);
+      }
+      if (props.customColorPrimary) {
+        SetVehicleCustomPrimaryColour(
+          vehicle,
+          props.customColorPrimary.r,
+          props.customColorPrimary.g,
+          props.customColorPrimary.b
+        );
+      }
+      if (props.customColorSecondary) {
+        SetVehicleCustomPrimaryColour(
+          vehicle,
+          props.customColorSecondary.r,
+          props.customColorSecondary.g,
+          props.customColorSecondary.b
+        );
+      }
+      if (props.extras) {
+        props.extras.forEach((isOn, index) => {
+          SetVehicleExtra(vehicle, index, isOn);
+        });
+      }
+      if (props.mods) {
+        if (props.mods.VMT_ARMOUR)
+          SetVehicleMod(
+            vehicle,
+            16 /* VMT_ARMOUR */,
+            props.mods.VMT_ARMOUR,
+            false
+          );
+        if (props.mods.VMT_BONNET)
+          SetVehicleMod(
+            vehicle,
+            7 /* VMT_BONNET */,
+            props.mods.VMT_BONNET,
+            false
+          );
+        if (props.mods.VMT_BRAKES)
+          SetVehicleMod(
+            vehicle,
+            12 /* VMT_BRAKES */,
+            props.mods.VMT_BRAKES,
+            false
+          );
+        if (props.mods.VMT_BUMPER_F)
+          SetVehicleMod(
+            vehicle,
+            1 /* VMT_BUMPER_F */,
+            props.mods.VMT_BUMPER_F,
+            false
+          );
+        if (props.mods.VMT_BUMPER_R)
+          SetVehicleMod(
+            vehicle,
+            2 /* VMT_BUMPER_R */,
+            props.mods.VMT_BUMPER_R,
+            false
+          );
+        if (props.mods.VMT_CHASSIS2)
+          SetVehicleMod(
+            vehicle,
+            42 /* VMT_CHASSIS2 */,
+            props.mods.VMT_CHASSIS2,
+            false
+          );
+        if (props.mods.VMT_CHASSIS3)
+          SetVehicleMod(
+            vehicle,
+            43 /* VMT_CHASSIS3 */,
+            props.mods.VMT_CHASSIS3,
+            false
+          );
+        if (props.mods.VMT_CHASSIS4)
+          SetVehicleMod(
+            vehicle,
+            44 /* VMT_CHASSIS4 */,
+            props.mods.VMT_CHASSIS4,
+            false
+          );
+        if (props.mods.VMT_CHASSIS5)
+          SetVehicleMod(
+            vehicle,
+            45 /* VMT_CHASSIS5 */,
+            props.mods.VMT_CHASSIS5,
+            false
+          );
+        if (props.mods.VMT_CHASSIS)
+          SetVehicleMod(
+            vehicle,
+            5 /* VMT_CHASSIS */,
+            props.mods.VMT_CHASSIS,
+            false
+          );
+        if (props.mods.VMT_DOOR_L)
+          SetVehicleMod(
+            vehicle,
+            46 /* VMT_DOOR_L */,
+            props.mods.VMT_DOOR_L,
+            false
+          );
+        if (props.mods.VMT_DOOR_R)
+          SetVehicleMod(
+            vehicle,
+            47 /* VMT_DOOR_R */,
+            props.mods.VMT_DOOR_R,
+            false
+          );
+        if (props.mods.VMT_ENGINE)
+          SetVehicleMod(
+            vehicle,
+            11 /* VMT_ENGINE */,
+            props.mods.VMT_ENGINE,
+            false
+          );
+        if (props.mods.VMT_ENGINEBAY1)
+          SetVehicleMod(
+            vehicle,
+            39 /* VMT_ENGINEBAY1 */,
+            props.mods.VMT_ENGINEBAY1,
+            false
+          );
+        if (props.mods.VMT_ENGINEBAY2)
+          SetVehicleMod(
+            vehicle,
+            40 /* VMT_ENGINEBAY2 */,
+            props.mods.VMT_ENGINEBAY2,
+            false
+          );
+        if (props.mods.VMT_ENGINEBAY3)
+          SetVehicleMod(
+            vehicle,
+            41 /* VMT_ENGINEBAY3 */,
+            props.mods.VMT_ENGINEBAY3,
+            false
+          );
+        if (props.mods.VMT_EXHAUST)
+          SetVehicleMod(
+            vehicle,
+            4 /* VMT_EXHAUST */,
+            props.mods.VMT_EXHAUST,
+            false
+          );
+        if (props.mods.VMT_GEARBOX)
+          SetVehicleMod(
+            vehicle,
+            13 /* VMT_GEARBOX */,
+            props.mods.VMT_GEARBOX,
+            false
+          );
+        if (props.mods.VMT_GRILL)
+          SetVehicleMod(
+            vehicle,
+            6 /* VMT_GRILL */,
+            props.mods.VMT_GRILL,
+            false
+          );
+        if (props.mods.VMT_HORN)
+          SetVehicleMod(
+            vehicle,
+            14 /* VMT_HORN */,
+            props.mods.VMT_HORN,
+            false
+          );
+        if (props.mods.VMT_HYDRAULICS)
+          SetVehicleMod(
+            vehicle,
+            21 /* VMT_HYDRAULICS */,
+            props.mods.VMT_HYDRAULICS,
+            false
+          );
+        if (props.mods.VMT_HYDRO)
+          SetVehicleMod(
+            vehicle,
+            38 /* VMT_HYDRO */,
+            props.mods.VMT_HYDRO,
+            false
+          );
+        if (props.mods.VMT_ICE)
+          SetVehicleMod(
+            vehicle,
+            36 /* VMT_ICE */,
+            props.mods.VMT_ICE,
+            false
+          );
+        if (props.mods.VMT_INTERIOR1)
+          SetVehicleMod(
+            vehicle,
+            27 /* VMT_INTERIOR1 */,
+            props.mods.VMT_INTERIOR1,
+            false
+          );
+        if (props.mods.VMT_INTERIOR2)
+          SetVehicleMod(
+            vehicle,
+            28 /* VMT_INTERIOR2 */,
+            props.mods.VMT_INTERIOR2,
+            false
+          );
+        if (props.mods.VMT_INTERIOR3)
+          SetVehicleMod(
+            vehicle,
+            29 /* VMT_INTERIOR3 */,
+            props.mods.VMT_INTERIOR3,
+            false
+          );
+        if (props.mods.VMT_INTERIOR4)
+          SetVehicleMod(
+            vehicle,
+            30 /* VMT_INTERIOR4 */,
+            props.mods.VMT_INTERIOR4,
+            false
+          );
+        if (props.mods.VMT_CHASSIS5)
+          SetVehicleMod(
+            vehicle,
+            45 /* VMT_CHASSIS5 */,
+            props.mods.VMT_CHASSIS5,
+            false
+          );
+        if (props.mods.VMT_KNOB)
+          SetVehicleMod(
+            vehicle,
+            34 /* VMT_KNOB */,
+            props.mods.VMT_KNOB,
+            false
+          );
+        if (props.mods.VMT_LIGHTBAR)
+          SetVehicleMod(
+            vehicle,
+            49 /* VMT_LIGHTBAR */,
+            props.mods.VMT_LIGHTBAR,
+            false
+          );
+        if (props.mods.VMT_LIVERY_MOD)
+          SetVehicleMod(
+            vehicle,
+            48 /* VMT_LIVERY_MOD */,
+            props.mods.VMT_LIVERY_MOD,
+            false
+          );
+        if (props.mods.VMT_NITROUS)
+          SetVehicleMod(
+            vehicle,
+            17 /* VMT_NITROUS */,
+            props.mods.VMT_NITROUS,
+            false
+          );
+        if (props.mods.VMT_PLAQUE)
+          SetVehicleMod(
+            vehicle,
+            35 /* VMT_PLAQUE */,
+            props.mods.VMT_PLAQUE,
+            false
+          );
+        if (props.mods.VMT_PLTHOLDER)
+          SetVehicleMod(
+            vehicle,
+            25 /* VMT_PLTHOLDER */,
+            props.mods.VMT_PLTHOLDER,
+            false
+          );
+        if (props.mods.VMT_PLTVANITY)
+          SetVehicleMod(
+            vehicle,
+            26 /* VMT_PLTVANITY */,
+            props.mods.VMT_PLTVANITY,
+            false
+          );
+        if (props.mods.VMT_ROOF)
+          SetVehicleMod(
+            vehicle,
+            10 /* VMT_ROOF */,
+            props.mods.VMT_ROOF,
+            false
+          );
+        if (props.mods.VMT_SEATS)
+          SetVehicleMod(
+            vehicle,
+            32 /* VMT_SEATS */,
+            props.mods.VMT_SEATS,
+            false
+          );
+        if (props.mods.VMT_SKIRT)
+          SetVehicleMod(
+            vehicle,
+            3 /* VMT_SKIRT */,
+            props.mods.VMT_SKIRT,
+            false
+          );
+        if (props.mods.VMT_SPOILER)
+          SetVehicleMod(
+            vehicle,
+            0 /* VMT_SPOILER */,
+            props.mods.VMT_SPOILER,
+            false
+          );
+        if (props.mods.VMT_STEERING)
+          SetVehicleMod(
+            vehicle,
+            33 /* VMT_STEERING */,
+            props.mods.VMT_STEERING,
+            false
+          );
+        if (props.mods.VMT_SUBWOOFER)
+          SetVehicleMod(
+            vehicle,
+            19 /* VMT_SUBWOOFER */,
+            props.mods.VMT_SUBWOOFER,
+            false
+          );
+        if (props.mods.VMT_SUSPENSION)
+          SetVehicleMod(
+            vehicle,
+            15 /* VMT_SUSPENSION */,
+            props.mods.VMT_SUSPENSION,
+            false
+          );
+        if (props.mods.VMT_TRUNK)
+          SetVehicleMod(
+            vehicle,
+            37 /* VMT_TRUNK */,
+            props.mods.VMT_TRUNK,
+            false
+          );
+        if (props.mods.VMT_TURBO)
+          ToggleVehicleMod(
+            vehicle,
+            18 /* VMT_TURBO */,
+            props.mods.VMT_TURBO
+          );
+        if (props.mods.VMT_TYRE_SMOKE)
+          ToggleVehicleMod(
+            vehicle,
+            20 /* VMT_TYRE_SMOKE */,
+            props.mods.VMT_TYRE_SMOKE
+          );
+        if (props.mods.VMT_WHEELS)
+          SetVehicleMod(
+            vehicle,
+            23 /* VMT_WHEELS */,
+            props.mods.VMT_WHEELS,
+            false
+          );
+        if (props.mods.VMT_WHEELS_REAR_OR_HYDRAULICS)
+          SetVehicleMod(
+            vehicle,
+            24 /* VMT_WHEELS_REAR_OR_HYDRAULICS */,
+            props.mods.VMT_WHEELS_REAR_OR_HYDRAULICS,
+            false
+          );
+        if (props.mods.VMT_WING_L)
+          SetVehicleMod(
+            vehicle,
+            8 /* VMT_WING_L */,
+            props.mods.VMT_WING_L,
+            false
+          );
+        if (props.mods.VMT_WING_R)
+          SetVehicleMod(
+            vehicle,
+            9 /* VMT_WING_R */,
+            props.mods.VMT_WING_R,
+            false
+          );
+        if (props.mods.VMT_XENON_LIGHTS)
+          ToggleVehicleMod(
+            vehicle,
+            22 /* VMT_XENON_LIGHTS */,
+            props.mods.VMT_XENON_LIGHTS
+          );
+        if (props.mods.modLivery) {
+          SetVehicleMod(vehicle, 48, props.mods.modLivery, false);
+          SetVehicleLivery(vehicle, props.mods.modLivery);
+        }
+        if (props.neonEnabled) {
+          props.neonEnabled.forEach((isEnable, index) => {
+            SetVehicleNeonLightEnabled(vehicle, index, isEnable);
+          });
+        }
+      }
+      if (props.pearlescentColor !== void 0 && props.wheelColor !== void 0) {
+        SetVehicleExtraColours(vehicle, props.pearlescentColor, props.wheelColor);
+      }
+      if (props.windowStatus) {
+        props.windowStatus.forEach((isIntact, doorIndex) => {
+          if (!isIntact) {
+            SmashVehicleWindow(vehicle, doorIndex);
+          }
+        });
+      }
+      if (props.tyreStatus) {
+        props.tyreStatus.forEach((isBurst, wheelId) => {
+          if (isBurst) {
+            SetVehicleTyreBurst(vehicle, wheelId, true, 1e3);
+          }
+        });
+      }
+      if (props.engineHealth) {
+        this.logInfo(props.engineHealth);
+        this.logInfo(typeof props.engineHealth);
+        SetVehicleEngineHealth(vehicle, props.engineHealth + 0);
+      }
+      if (props.dirtLevel) {
+        SetVehicleDirtLevel(vehicle, props.dirtLevel);
+      }
+    }
+    async spawnVehicle(name, props) {
+      await this.prepareGreenscreen();
+      if (!this.greenscreenEntity)
+        return;
+      if (!this.camera)
+        return;
+      const vehicleHash = GetHashKey(name);
+      RequestModel(vehicleHash);
+      while (!HasModelLoaded(vehicleHash)) {
+        await Sleep(1);
+      }
+      if (this.spawnedVehicle) {
+        DeleteEntity(this.spawnedVehicle);
+      }
+      const frontGreenscreen = GetOffsetFromEntityInWorldCoords(
+        this.greenscreenEntity,
+        0,
+        -5,
+        0
+      );
+      this.spawnedVehicle = CreateVehicle(
+        vehicleHash,
+        frontGreenscreen[0],
+        frontGreenscreen[1],
+        frontGreenscreen[2],
+        0,
+        false,
+        false
+      );
+      SetEntityHeading(this.spawnedVehicle, 130);
+      FreezeEntityPosition(this.spawnedVehicle, true);
+      if (props) {
+        this.setVehicleProperties(this.spawnedVehicle, props);
+      }
+      const camOffsetFromGreenScreen = GetOffsetFromEntityInWorldCoords(
+        this.greenscreenEntity,
+        0,
+        -12.5,
+        1.5
+      );
+      SetCamCoord(
+        this.camera,
+        camOffsetFromGreenScreen[0],
+        camOffsetFromGreenScreen[1],
+        camOffsetFromGreenScreen[2]
+      );
+      SetCamFov(this.camera, 40);
+      PointCamAtEntity(this.camera, this.spawnedVehicle, 0, 0, 0, true);
+    }
+    async LoadDefaultModel(malePed, cb) {
+      const playerPed = GetPlayerPed(-1);
+      const characterModel = malePed ? GetHashKey("mp_m_freemode_01") : GetHashKey("mp_f_freemode_01");
+      RequestModel(characterModel);
+      while (!HasModelLoaded(characterModel)) {
+        RequestModel(characterModel);
+        await Sleep(0);
+      }
+      if (IsModelInCdimage(characterModel) && IsModelValid(characterModel)) {
+        SetPlayerModel(PlayerId(), characterModel);
+        SetPedDefaultComponentVariation(playerPed);
+      }
+      SetModelAsNoLongerNeeded(characterModel);
+      if (cb) {
+        cb();
+      }
+    }
+    async setCoords(coords) {
+      if (!coords)
+        return;
+      const playerPed = PlayerPedId();
+      SetEntityCoordsNoOffset(
+        playerPed,
+        coords[0],
+        coords[1],
+        coords[2],
+        false,
+        false,
+        false
+      );
+      const time = GetGameTimer();
+      while (!HasCollisionLoadedAroundEntity(playerPed) && GetGameTimer() - time < 5e3) {
+        RequestCollisionAtCoord(coords[0], coords[1], coords[2]);
+        await Sleep(0);
+      }
+      SetEntityCoordsNoOffset(
+        playerPed,
+        coords[0],
+        coords[1],
+        coords[2],
+        false,
+        false,
+        false
+      );
+    }
+    async createClotheAsset(name) {
+      ClearOverrideWeather();
+      ClearWeatherTypePersist();
+      SetWeatherTypePersist("CLEAR");
+      SetWeatherTypeNow("CLEAR");
+      NetworkOverrideClockTime(12, 0, 0);
+      PauseClock(true);
+      DisplayRadar(false);
+      exports["ProjectStarboy"].ExportController_ExecuteService(
+        "PlayernameService",
+        "toggle",
+        false
+      );
+      emitNet("screenshot:switchBucket");
+      const playerPed = PlayerPedId();
+      const [gender, componentId, drawableId, textureId] = name.split("_");
+      if (!gender || !componentId || !drawableId || !textureId)
+        return;
+      this.lastPosition = GetEntityCoords(playerPed, true);
+      await this.LoadDefaultModel(gender === "male" ? true : false);
+      SetPedComponentVariation(PlayerPedId(), 0, 1, 1, 0);
+      await this.setCoords([
+        -1238.91064453125,
+        -3296.92822265625,
+        13.940055847167969
+      ]);
+      const modelHash = GetHashKey("prop_big_cin_screen");
+      RequestModel(modelHash);
+      while (!HasModelLoaded(modelHash)) {
+        await Sleep(1);
+      }
+      if (this.greenscreenEntity) {
+        DeleteEntity(this.greenscreenEntity);
+      }
+      if (this.camera) {
+        DestroyCam(this.camera, false);
+      }
+      const playerCoords = GetEntityCoords(PlayerPedId(), true);
+      this.logInfo(playerCoords);
+      this.greenscreenEntity = CreateObject(
+        modelHash,
+        -1238.91064453125,
+        -3296.92822265625,
+        13.940055847167969,
+        false,
+        false,
+        false
+      );
+      SetEntityCoords(
+        PlayerPedId(),
+        -1238.9044189453125,
+        -3296.92822265625,
+        28.331361770629883,
+        false,
+        false,
+        false,
+        false
+      );
+      FreezeEntityPosition(PlayerPedId(), true);
+      RequestAnimDict("mp_sleep");
+      while (!HasAnimDictLoaded("mp_sleep")) {
+        await Sleep(1);
+      }
+      TaskPlayAnim(
+        PlayerPedId(),
+        "mp_sleep",
+        "bind_pose_180",
+        999,
+        999,
+        -1,
+        1,
+        1,
+        true,
+        true,
+        true
+      );
+      await Sleep(100);
+      SetPedComponentVariation(PlayerPedId(), 1, -1, 0, 0);
+      SetPedComponentVariation(PlayerPedId(), 3, -1, 0, 0);
+      SetPedComponentVariation(PlayerPedId(), 4, -1, 0, 0);
+      SetPedComponentVariation(PlayerPedId(), 6, -1, 0, 0);
+      SetPedComponentVariation(PlayerPedId(), 8, -1, 0, 0);
+      SetPedComponentVariation(PlayerPedId(), 11, -1, 0, 0);
+      SetEntityHeading(PlayerPedId(), 180);
+      switch (Number(componentId)) {
+        case 0: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            headCam.camPos[0],
+            headCam.camPos[1],
+            headCam.camPos[2],
+            headCam.camRot[0],
+            headCam.camRot[1],
+            headCam.camRot[2],
+            headCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Head,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 1: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            headCam.camPos[0],
+            headCam.camPos[1],
+            headCam.camPos[2],
+            headCam.camRot[0],
+            headCam.camRot[1],
+            headCam.camRot[2],
+            headCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Head,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 2: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            headCam.camPos[0],
+            headCam.camPos[1],
+            headCam.camPos[2],
+            headCam.camRot[0],
+            headCam.camRot[1],
+            headCam.camRot[2],
+            headCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Head,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 3: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 4: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            legCam.camPos[0],
+            legCam.camPos[1],
+            legCam.camPos[2],
+            legCam.camRot[0],
+            legCam.camRot[1],
+            legCam.camRot[2],
+            legCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 5: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetEntityHeading(PlayerPedId(), 0);
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 6: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            shoeCam.camPos[0],
+            shoeCam.camPos[1],
+            shoeCam.camPos[2],
+            shoeCam.camRot[0],
+            shoeCam.camRot[1],
+            shoeCam.camRot[2],
+            shoeCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_R_Foot,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 7: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 8: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 9: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 10: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        case 11: {
+          this.camera = CreateCamWithParams(
+            "DEFAULT_SCRIPTED_CAMERA",
+            bodyCam.camPos[0],
+            bodyCam.camPos[1],
+            bodyCam.camPos[2],
+            bodyCam.camRot[0],
+            bodyCam.camRot[1],
+            bodyCam.camRot[2],
+            bodyCam.camFov,
+            true,
+            2
+          );
+          SetCamActive(this.camera, true);
+          RenderScriptCams(true, false, 0, true, false);
+          const bonePosition = GetPedBoneCoords(
+            PlayerPedId(),
+            Bones.SKEL_Spine3,
+            0,
+            0,
+            0
+          );
+          PointCamAtCoord(
+            this.camera,
+            bonePosition[0],
+            bonePosition[1],
+            bonePosition[2]
+          );
+          break;
+        }
+        default:
+          break;
+      }
+      if (!this.greenscreenEntity)
+        return;
+      if (!this.camera)
+        return;
+      if (IsPedComponentVariationValid(
+        PlayerPedId(),
+        Number(componentId),
+        Number(drawableId),
+        Number(textureId)
+      )) {
+        SetPedPreloadVariationData(
+          PlayerPedId(),
+          Number(componentId),
+          Number(drawableId),
+          Number(textureId)
+        );
+        const curTime = GetGameTimer();
+        while (!HasPedPreloadVariationDataFinished(PlayerPedId()) && GetGameTimer() - curTime < 5e3) {
+          await Sleep(100);
+        }
+        if (HasPedPreloadVariationDataFinished(PlayerPedId())) {
+          SetPedComponentVariation(
+            PlayerPedId(),
+            Number(componentId),
+            Number(drawableId),
+            Number(textureId),
+            0
+          );
+          await Sleep(100);
+        }
+      }
+    }
+    async destroy() {
+      if (this.greenscreenEntity) {
+        DeleteEntity(this.greenscreenEntity);
+        this.greenscreenEntity = void 0;
+      }
+      if (this.spawnedVehicle) {
+        DeleteEntity(this.spawnedVehicle);
+        this.spawnedVehicle = void 0;
+      }
+      if (this.camera) {
+        RenderScriptCams(false, false, 0, true, false);
+        DestroyCam(this.camera, false);
+        this.camera = void 0;
+      }
+      DisplayRadar(true);
+      exports["ProjectStarboy"].ExportController_ExecuteService(
+        "PlayernameService",
+        "toggle",
+        true
+      );
+      if (this.lastPosition) {
+        this.setCoords(this.lastPosition);
+        this.lastPosition = void 0;
+      }
+      FreezeEntityPosition(PlayerPedId(), false);
+      emitNet("screenshot:switchBucket", true);
     }
   };
-  TestController = __decorateClass([
-    (0, import_starboy_framework.Controller)()
-  ], TestController);
+  ScreenshotService = __decorateClass([
+    (0, import_starboy_framework.Injectable)()
+  ], ScreenshotService);
+
+  // src/client/controllers/screenshot.controller.ts
+  var ScreenshotController = class extends AppController {
+    constructor(screenshotService) {
+      super("ScreenshotController");
+      this.screenshotService = screenshotService;
+    }
+    async takeVehicle(bucket, name, vehicleName, props) {
+      this.logInfo("Taking vehicle screenshot...");
+      await this.screenshotService.spawnVehicle(vehicleName, props);
+      if (!vehicleName) {
+        throw new Error("You must provide a name for the screenshot");
+      }
+      const response = await emitCallback("screenshot:takeScreenshot", [
+        name,
+        bucket
+      ]);
+      this.logInfo(response);
+      await this.screenshotService.destroy();
+      return response;
+    }
+    async takeClothe(source2, [name]) {
+      this.logInfo("Taking clothe screenshot...");
+      if (!name) {
+        throw new Error("You must provide a name for the screenshot");
+      }
+      await this.screenshotService.createClotheAsset(name);
+      const response = await emitCallback("screenshot:takeScreenshot", [
+        name,
+        "items"
+      ]);
+      this.logInfo(response);
+      await this.screenshotService.destroy();
+      return response;
+    }
+    async takeScreenshot({ bucket, name, vehicleName, props }, cb) {
+      this.logInfo("Taking screenshot...", bucket, name);
+      if (!name) {
+        return cb("You must provide a name for the screenshot");
+      }
+      if (!bucket) {
+        return cb("You must provide a bucket for the screenshot");
+      }
+      switch (bucket) {
+        case "vehicles": {
+          const url = await this.takeVehicle(
+            bucket,
+            name,
+            vehicleName || name,
+            props
+          );
+          return cb(url);
+        }
+        case "items": {
+          const url = await this.takeClothe(
+            String(GetPlayerServerId(PlayerId())),
+            [name]
+          );
+          return cb(url);
+        }
+        case "owned_vehicles": {
+          const url = await this.takeVehicle(
+            bucket,
+            name,
+            vehicleName || name,
+            props
+          );
+          return cb(url);
+        }
+        default:
+          break;
+      }
+    }
+    async destroy(rsName) {
+      if (rsName !== GetCurrentResourceName())
+        return;
+      await this.screenshotService.destroy();
+    }
+  };
+  __decorateClass([
+    (0, import_starboy_framework2.ChatCommand)("takeclothe", "Take a screenshot of the vehicle you're in", [
+      { name: "name", help: "vehicle spawn name" }
+    ])
+  ], ScreenshotController.prototype, "takeClothe", 1);
+  __decorateClass([
+    (0, import_starboy_framework2.Event)("screenshot:takeScreenshot")
+  ], ScreenshotController.prototype, "takeScreenshot", 1);
+  __decorateClass([
+    (0, import_starboy_framework2.Event)("onResourceStop")
+  ], ScreenshotController.prototype, "destroy", 1);
+  ScreenshotController = __decorateClass([
+    (0, import_starboy_framework2.Controller)(),
+    __decorateParam(0, (0, import_starboy_framework2.Inject)(ScreenshotService))
+  ], ScreenshotController);
 
   // src/client/client.ts
-  var import_starboy_framework2 = __toESM(require_dist());
-  var client = import_starboy_framework2.App.create({
-    controllers: [TestController]
+  var import_starboy_framework3 = __toESM(require_dist());
+  var client = import_starboy_framework3.App.create({
+    controllers: [ScreenshotController]
   });
   client.start();
 })();

@@ -33,6 +33,7 @@
     "inversify": "^6.0.1",
     "inversify-props": "^2.2.6",
     "inversify-tracer": "^1.2.2",
+    "jimp": "^0.22.12",
     "starboy-framework": "^1.2.2",
     "tiny-glob": "^0.2.9",
     "ts-node": "^10.9.1",

@@ -25,10 +25,10 @@ lua54 "yes"
 
 
 server_scripts {
-  "dist/server/**/*.js",
+  "dist/server/server.js",
 }
 
 client_scripts {
-  "dist/client/**/*.js",
+  "dist/client/client.js",
 }
 

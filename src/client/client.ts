@@ -1,7 +1,7 @@
-import '@citizenfx/client';
-import { TestController } from 'controllers/test.controller';
-import { App } from 'starboy-framework';
+import '@citizenfx/client'
+import { ScreenshotController } from 'controllers/screenshot.controller'
+import { App } from 'starboy-framework'
 const client = App.create({
-  controllers: [TestController],
-});
-client.start();
+  controllers: [ScreenshotController],
+})
+client.start()
