@@ -11876,11 +11876,13 @@
       this.lastPosition = GetEntityCoords(playerPed, true);
       emitNet("screenshot:switchBucket");
       DisplayRadar(false);
-      exports["ProjectStarboy"].ExportController_ExecuteService(
-        "PlayernameService",
-        "toggle",
-        false
-      );
+      if (GetResourceState("ProjectStarboy") === "started") {
+        exports["ProjectStarboy"].ExportController_ExecuteService(
+          "PlayernameService",
+          "toggle",
+          false
+        );
+      }
       RequestCollisionAtCoord(ScreenCoords[0], ScreenCoords[1], ScreenCoords[2]);
       SetEntityCoords(
         playerPed,
@@ -12455,7 +12457,15 @@
         false
       );
     }
-    async createClotheAsset(name) {
+    async createClotheAsset(gender, type, componentId, drawableId, textureId) {
+      console.log(
+        "createClotheAsset",
+        gender,
+        type,
+        componentId,
+        drawableId,
+        textureId
+      );
       ClearOverrideWeather();
       ClearWeatherTypePersist();
       SetWeatherTypePersist("CLEAR");
@@ -12463,16 +12473,16 @@
       NetworkOverrideClockTime(12, 0, 0);
       PauseClock(true);
       DisplayRadar(false);
-      exports["ProjectStarboy"].ExportController_ExecuteService(
-        "PlayernameService",
-        "toggle",
-        false
-      );
+      if (GetResourceState("ProjectStarboy") === "started") {
+        exports["ProjectStarboy"].ExportController_ExecuteService(
+          "PlayernameService",
+          "toggle",
+          false
+        );
+      }
       emitNet("screenshot:switchBucket");
       const playerPed = PlayerPedId();
-      const [gender, componentId, drawableId, textureId] = name.split("_");
-      if (!gender || !componentId || !drawableId || !textureId)
-        return;
+      this.logInfo("createClotheAsset 2");
       this.lastPosition = GetEntityCoords(playerPed, true);
       await this.LoadDefaultModel(gender === "male" ? true : false);
       SetPedComponentVariation(PlayerPedId(), 0, 1, 1, 0);
@@ -12951,11 +12961,13 @@
         this.camera = void 0;
       }
       DisplayRadar(true);
-      exports["ProjectStarboy"].ExportController_ExecuteService(
-        "PlayernameService",
-        "toggle",
-        true
-      );
+      if (GetResourceState("ProjectStarboy") === "started") {
+        exports["ProjectStarboy"].ExportController_ExecuteService(
+          "PlayernameService",
+          "toggle",
+          true
+        );
+      }
       if (this.lastPosition) {
         this.setCoords(this.lastPosition);
         this.lastPosition = void 0;
@@ -12988,51 +13000,42 @@
       await this.screenshotService.destroy();
       return response;
     }
-    async takeClothe(source2, [name]) {
-      this.logInfo("Taking clothe screenshot...");
-      if (!name) {
-        throw new Error("You must provide a name for the screenshot");
-      }
-      await this.screenshotService.createClotheAsset(name);
-      const response = await emitCallback("screenshot:takeScreenshot", [
-        name,
-        "items"
-      ]);
-      this.logInfo(response);
-      await this.screenshotService.destroy();
-      return response;
-    }
-    async takeScreenshot({ bucket, name, vehicleName, props }, cb) {
-      this.logInfo("Taking screenshot...", bucket, name);
-      if (!name) {
-        return cb("You must provide a name for the screenshot");
-      }
-      if (!bucket) {
-        return cb("You must provide a bucket for the screenshot");
-      }
-      switch (bucket) {
+    async takeScreenshot(payload, cb) {
+      switch (payload.bucket) {
         case "vehicles": {
           const url = await this.takeVehicle(
-            bucket,
-            name,
-            vehicleName || name,
-            props
+            payload.bucket,
+            payload.name,
+            payload.name,
+            payload.props
           );
           return cb(url);
         }
         case "items": {
-          const url = await this.takeClothe(
-            String(GetPlayerServerId(PlayerId())),
-            [name]
+          await this.screenshotService.createClotheAsset(
+            payload.gender,
+            payload.type,
+            payload.componentId,
+            payload.drawableId,
+            payload.textureId
           );
-          return cb(url);
+          const response = await emitCallback(
+            "screenshot:takeScreenshot",
+            [payload.name, payload.bucket]
+          );
+          this.logInfo(response);
+          await this.screenshotService.destroy();
+          if (GetResourceState("ox_inventory") === "started") {
+            exports.ox_inventory.refreshPlayerClothing();
+          }
+          return cb(response);
         }
         case "owned_vehicles": {
           const url = await this.takeVehicle(
-            bucket,
-            name,
-            vehicleName || name,
-            props
+            payload.bucket,
+            payload.name,
+            payload.vehicleName,
+            payload.props
           );
           return cb(url);
         }
@@ -13046,11 +13049,6 @@
       await this.screenshotService.destroy();
     }
   };
-  __decorateClass([
-    (0, import_starboy_framework2.ChatCommand)("takeclothe", "Take a screenshot of the vehicle you're in", [
-      { name: "name", help: "vehicle spawn name" }
-    ])
-  ], ScreenshotController.prototype, "takeClothe", 1);
   __decorateClass([
     (0, import_starboy_framework2.Event)("screenshot:takeScreenshot")
   ], ScreenshotController.prototype, "takeScreenshot", 1);

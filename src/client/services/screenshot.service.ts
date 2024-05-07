@@ -153,11 +153,13 @@ export class ScreenshotService extends AppService {
     this.lastPosition = GetEntityCoords(playerPed, true)
     emitNet('screenshot:switchBucket')
     DisplayRadar(false)
-    exports['ProjectStarboy'].ExportController_ExecuteService(
-      'PlayernameService',
-      'toggle',
-      false
-    )
+    if (GetResourceState('ProjectStarboy') === 'started') {
+      exports['ProjectStarboy'].ExportController_ExecuteService(
+        'PlayernameService',
+        'toggle',
+        false
+      )
+    }
     RequestCollisionAtCoord(ScreenCoords[0], ScreenCoords[1], ScreenCoords[2])
 
     SetEntityCoords(
@@ -765,7 +767,21 @@ export class ScreenshotService extends AppService {
     )
   }
 
-  async createClotheAsset(name: string) {
+  async createClotheAsset(
+    gender: 'male' | 'female',
+    type: 'component' | 'props',
+    componentId: number,
+    drawableId: number,
+    textureId: number
+  ) {
+    console.log(
+      'createClotheAsset',
+      gender,
+      type,
+      componentId,
+      drawableId,
+      textureId
+    )
     ClearOverrideWeather()
     ClearWeatherTypePersist()
     SetWeatherTypePersist('CLEAR')
@@ -773,15 +789,17 @@ export class ScreenshotService extends AppService {
     NetworkOverrideClockTime(12, 0, 0)
     PauseClock(true)
     DisplayRadar(false)
-    exports['ProjectStarboy'].ExportController_ExecuteService(
-      'PlayernameService',
-      'toggle',
-      false
-    )
+    if (GetResourceState('ProjectStarboy') === 'started') {
+      exports['ProjectStarboy'].ExportController_ExecuteService(
+        'PlayernameService',
+        'toggle',
+        false
+      )
+    }
     emitNet('screenshot:switchBucket')
     const playerPed = PlayerPedId()
-    const [gender, componentId, drawableId, textureId] = name.split('_')
-    if (!gender || !componentId || !drawableId || !textureId) return
+    /* if (!gender || !componentId || !drawableId || !textureId) return */
+    this.logInfo('createClotheAsset 2')
     this.lastPosition = GetEntityCoords(playerPed, true)
     await this.LoadDefaultModel(gender === 'male' ? true : false)
     SetPedComponentVariation(PlayerPedId(), 0, 1, 1, 0)
@@ -1365,11 +1383,13 @@ export class ScreenshotService extends AppService {
       this.camera = undefined
     }
     DisplayRadar(true)
-    exports['ProjectStarboy'].ExportController_ExecuteService(
-      'PlayernameService',
-      'toggle',
-      true
-    )
+    if (GetResourceState('ProjectStarboy') === 'started') {
+      exports['ProjectStarboy'].ExportController_ExecuteService(
+        'PlayernameService',
+        'toggle',
+        true
+      )
+    }
     if (this.lastPosition) {
       /* SetEntityCoords(
         PlayerPedId(),

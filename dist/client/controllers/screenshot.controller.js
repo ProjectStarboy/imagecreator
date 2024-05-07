@@ -1,6 +1,6 @@
 import { __decorate, __metadata, __param } from "tslib";
-import { ChatCommand, Controller, Event, Inject, } from 'starboy-framework';
-import { AppController, } from '@core-shared/interfaces/';
+import { Controller, Event, Inject, } from 'starboy-framework';
+import { AppController } from '@core-shared/interfaces/';
 import { emitCallback } from 'utils/callback';
 import { ScreenshotService } from 'services/screenshot.service';
 let ScreenshotController = class ScreenshotController extends AppController {
@@ -26,39 +26,42 @@ let ScreenshotController = class ScreenshotController extends AppController {
         await this.screenshotService.destroy();
         return response;
     }
-    async takeClothe(source, [name]) {
-        this.logInfo('Taking clothe screenshot...');
-        if (!name) {
-            throw new Error('You must provide a name for the screenshot');
-        }
-        await this.screenshotService.createClotheAsset(name);
-        const response = await emitCallback('screenshot:takeScreenshot', [
-            name,
-            'items',
-        ]);
-        this.logInfo(response);
-        await this.screenshotService.destroy();
-        return response;
-    }
-    async takeScreenshot({ bucket, name, vehicleName, props }, cb) {
-        this.logInfo('Taking screenshot...', bucket, name);
-        if (!name) {
-            return cb('You must provide a name for the screenshot');
-        }
-        if (!bucket) {
-            return cb('You must provide a bucket for the screenshot');
-        }
-        switch (bucket) {
+    /* @ChatCommand('takeclothe', "Take a screenshot of the vehicle you're in", [
+      { name: 'name', help: 'vehicle spawn name' },
+    ])
+    async takeClothe(source: string, [name]: string[]) {
+      this.logInfo('Taking clothe screenshot...')
+  
+      if (!name) {
+        throw new Error('You must provide a name for the screenshot')
+      }
+      await this.screenshotService.createClotheAsset(name)
+      const response = await emitCallback<string>('screenshot:takeScreenshot', [
+        name,
+        'items',
+      ])
+      this.logInfo(response)
+      await this.screenshotService.destroy()
+      return response
+    } */
+    async takeScreenshot(payload, cb) {
+        switch (payload.bucket) {
             case 'vehicles': {
-                const url = await this.takeVehicle(bucket, name, vehicleName || name, props);
+                const url = await this.takeVehicle(payload.bucket, payload.name, payload.name, payload.props);
                 return cb(url);
             }
             case 'items': {
-                const url = await this.takeClothe(String(GetPlayerServerId(PlayerId())), [name]);
-                return cb(url);
+                await this.screenshotService.createClotheAsset(payload.gender, payload.type, payload.componentId, payload.drawableId, payload.textureId);
+                const response = await emitCallback('screenshot:takeScreenshot', [payload.name, payload.bucket]);
+                this.logInfo(response);
+                await this.screenshotService.destroy();
+                if (GetResourceState('ox_inventory') === 'started') {
+                    exports.ox_inventory.refreshPlayerClothing();
+                }
+                return cb(response);
             }
             case 'owned_vehicles': {
-                const url = await this.takeVehicle(bucket, name, vehicleName || name, props);
+                const url = await this.takeVehicle(payload.bucket, payload.name, payload.vehicleName, payload.props);
                 return cb(url);
             }
             default:
@@ -71,14 +74,6 @@ let ScreenshotController = class ScreenshotController extends AppController {
         await this.screenshotService.destroy();
     }
 };
-__decorate([
-    ChatCommand('takeclothe', "Take a screenshot of the vehicle you're in", [
-        { name: 'name', help: 'vehicle spawn name' },
-    ]),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Array]),
-    __metadata("design:returntype", Promise)
-], ScreenshotController.prototype, "takeClothe", null);
 __decorate([
     Event('screenshot:takeScreenshot'),
     __metadata("design:type", Function),

@@ -5,13 +5,10 @@ import {
   Inject,
   NuiHandler,
 } from 'starboy-framework'
-import {
-  AppController,
-  ICreateAssetPayload,
-  IVehicleProperties,
-} from '@core-shared/interfaces/'
+import { AppController, IVehicleProperties } from '@core-shared/interfaces/'
 import { emitCallback } from 'utils/callback'
 import { ScreenshotService } from 'services/screenshot.service'
+import { ICreateAssetPayload } from '../../shared/types/payload.type'
 
 @Controller()
 export class ScreenshotController extends AppController {
@@ -46,7 +43,7 @@ export class ScreenshotController extends AppController {
     await this.screenshotService.destroy()
     return response
   }
-  @ChatCommand('takeclothe', "Take a screenshot of the vehicle you're in", [
+  /* @ChatCommand('takeclothe', "Take a screenshot of the vehicle you're in", [
     { name: 'name', help: 'vehicle spawn name' },
   ])
   async takeClothe(source: string, [name]: string[]) {
@@ -63,43 +60,45 @@ export class ScreenshotController extends AppController {
     this.logInfo(response)
     await this.screenshotService.destroy()
     return response
-  }
+  } */
 
   @Event('screenshot:takeScreenshot')
-  async takeScreenshot(
-    { bucket, name, vehicleName, props }: ICreateAssetPayload,
-    cb: any
-  ) {
-    this.logInfo('Taking screenshot...', bucket, name)
-    if (!name) {
-      return cb('You must provide a name for the screenshot')
-    }
-    if (!bucket) {
-      return cb('You must provide a bucket for the screenshot')
-    }
-    switch (bucket) {
+  async takeScreenshot(payload: ICreateAssetPayload, cb: any) {
+    switch (payload.bucket) {
       case 'vehicles': {
         const url = await this.takeVehicle(
-          bucket,
-          name,
-          vehicleName || name,
-          props
+          payload.bucket,
+          payload.name,
+          payload.name,
+          payload.props
         )
         return cb(url)
       }
       case 'items': {
-        const url = await this.takeClothe(
-          String(GetPlayerServerId(PlayerId())),
-          [name]
+        await this.screenshotService.createClotheAsset(
+          payload.gender,
+          payload.type,
+          payload.componentId,
+          payload.drawableId,
+          payload.textureId
         )
-        return cb(url)
+        const response = await emitCallback<string>(
+          'screenshot:takeScreenshot',
+          [payload.name, payload.bucket]
+        )
+        this.logInfo(response)
+        await this.screenshotService.destroy()
+        if (GetResourceState('ox_inventory') === 'started') {
+          exports.ox_inventory.refreshPlayerClothing()
+        }
+        return cb(response)
       }
       case 'owned_vehicles': {
         const url = await this.takeVehicle(
-          bucket,
-          name,
-          vehicleName || name,
-          props
+          payload.bucket,
+          payload.name,
+          payload.vehicleName,
+          payload.props
         )
         return cb(url)
       }

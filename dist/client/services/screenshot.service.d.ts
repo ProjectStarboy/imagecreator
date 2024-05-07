@@ -10,6 +10,6 @@ export declare class ScreenshotService extends AppService {
     spawnVehicle(name: string, props?: IVehicleProperties): Promise<void>;
     LoadDefaultModel(malePed: boolean, cb?: () => void): Promise<void>;
     setCoords(coords: number[]): Promise<void>;
-    createClotheAsset(name: string): Promise<void>;
+    createClotheAsset(gender: 'male' | 'female', type: 'component' | 'props', componentId: number, drawableId: number, textureId: number): Promise<void>;
     destroy(): Promise<void>;
 }
