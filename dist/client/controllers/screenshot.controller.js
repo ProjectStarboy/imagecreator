@@ -36,7 +36,7 @@ let ScreenshotController = class ScreenshotController extends AppController {
                 const data = {
                     targetType: 'vehicle',
                     bucket,
-                    name: args[1],
+                    name: args[2],
                 };
                 const url = this.takeScreenshot(data);
                 this.logInfo(url);
@@ -46,12 +46,12 @@ let ScreenshotController = class ScreenshotController extends AppController {
                 const data = {
                     targetType: 'clothe',
                     bucket,
-                    type: args[3],
-                    componentId: Number(args[4]),
-                    drawableId: Number(args[5]),
-                    textureId: Number(args[6]),
-                    name: args[1],
-                    gender: args[7],
+                    type: args[4],
+                    componentId: Number(args[5]),
+                    drawableId: Number(args[6]),
+                    textureId: Number(args[7]),
+                    name: args[2],
+                    gender: args[8],
                 };
                 const url = this.takeScreenshot(data);
                 this.logInfo(url);

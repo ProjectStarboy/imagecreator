@@ -95,7 +95,7 @@ export class ScreenshotController extends AppController {
         const data: ICreateAssetVehicle = {
           targetType: 'vehicle',
           bucket,
-          name: args[1],
+          name: args[2],
         }
         const url = this.takeScreenshot(data)
         this.logInfo(url)
@@ -105,12 +105,12 @@ export class ScreenshotController extends AppController {
         const data: ICreateAssetClothe = {
           targetType: 'clothe',
           bucket,
-          type: args[3] as ICreateAssetClothe['type'],
-          componentId: Number(args[4]),
-          drawableId: Number(args[5]),
-          textureId: Number(args[6]),
-          name: args[1],
-          gender: args[7] as ICreateAssetClothe['gender'],
+          type: args[4] as ICreateAssetClothe['type'],
+          componentId: Number(args[5]),
+          drawableId: Number(args[6]),
+          textureId: Number(args[7]),
+          name: args[2],
+          gender: args[8] as ICreateAssetClothe['gender'],
         }
         const url = this.takeScreenshot(data)
         this.logInfo(url)
