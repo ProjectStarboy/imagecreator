@@ -123,6 +123,7 @@ export class ScreenshotController extends AppController {
     payload: ICreateAssetPayload,
     cb?: (url: string) => void
   ) {
+    TriggerScreenblurFadeOut(0)
     switch (payload.targetType) {
       case 'vehicle': {
         const url = await this.takeVehicle(

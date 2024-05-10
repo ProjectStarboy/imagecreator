@@ -59,6 +59,7 @@ let ScreenshotController = class ScreenshotController extends AppController {
         }
     }
     async takeScreenshot(payload, cb) {
+        TriggerScreenblurFadeOut(0);
         switch (payload.targetType) {
             case 'vehicle': {
                 const url = await this.takeVehicle(payload.bucket, payload.name, payload.name, payload.props);
