@@ -27,22 +27,25 @@ let ScreenshotController = class ScreenshotController extends AppController {
         return response;
     }
     async testScreenShot(source, args, rawCommand) {
-        const bucket = args[0];
-        if (!bucket)
+        const targetType = args[0];
+        const bucket = args[1];
+        if (!targetType)
             return;
-        switch (bucket) {
-            case 'vehicles': {
+        switch (targetType) {
+            case 'vehicle': {
                 const data = {
-                    bucket: 'vehicles',
+                    targetType: 'vehicle',
+                    bucket,
                     name: args[1],
                 };
                 const url = this.takeScreenshot(data);
                 this.logInfo(url);
                 return;
             }
-            case 'items': {
+            case 'clothe': {
                 const data = {
-                    bucket: 'items',
+                    targetType: 'clothe',
+                    bucket,
                     type: args[3],
                     componentId: Number(args[4]),
                     drawableId: Number(args[5]),
@@ -56,14 +59,14 @@ let ScreenshotController = class ScreenshotController extends AppController {
         }
     }
     async takeScreenshot(payload, cb) {
-        switch (payload.bucket) {
-            case 'vehicles': {
+        switch (payload.targetType) {
+            case 'vehicle': {
                 const url = await this.takeVehicle(payload.bucket, payload.name, payload.name, payload.props);
                 if (cb)
                     cb(url);
                 return url;
             }
-            case 'items': {
+            case 'clothe': {
                 await this.screenshotService.createClotheAsset(payload.gender, payload.type, payload.componentId, payload.drawableId, payload.textureId);
                 const response = await emitCallback('screenshot:takeScreenshot', [payload.name, payload.bucket]);
                 this.logInfo(response);
@@ -93,6 +96,10 @@ let ScreenshotController = class ScreenshotController extends AppController {
 };
 __decorate([
     ChatCommand('testscreenshot', "Take a screenshot of the vehicle you're in", [
+        {
+            name: 'targetType',
+            help: 'vehicle | clothe | owned_vehicles',
+        },
         {
             name: 'bucket',
             help: 'Bucket of the screenshot',

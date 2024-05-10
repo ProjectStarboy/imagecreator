@@ -34,7 +34,7 @@ export class ScreenshotController extends AppController {
     props?: IVehicleProperties
   ) {
     this.logInfo('Taking vehicle screenshot...')
-    
+
     await this.screenshotService.spawnVehicle(vehicleName, props)
     if (!vehicleName) {
       throw new Error('You must provide a name for the screenshot')
@@ -49,6 +49,10 @@ export class ScreenshotController extends AppController {
   }
 
   @ChatCommand('testscreenshot', "Take a screenshot of the vehicle you're in", [
+    {
+      name: 'targetType',
+      help: 'vehicle | clothe | owned_vehicles',
+    },
     {
       name: 'bucket',
       help: 'Bucket of the screenshot',
@@ -83,21 +87,24 @@ export class ScreenshotController extends AppController {
     },
   ])
   async testScreenShot(source: any, args: string[], rawCommand: string) {
-    const bucket = args[0]
-    if (!bucket) return
-    switch (bucket) {
-      case 'vehicles': {
+    const targetType = args[0]
+    const bucket = args[1]
+    if (!targetType) return
+    switch (targetType) {
+      case 'vehicle': {
         const data: ICreateAssetVehicle = {
-          bucket: 'vehicles',
+          targetType: 'vehicle',
+          bucket,
           name: args[1],
         }
         const url = this.takeScreenshot(data)
         this.logInfo(url)
         return
       }
-      case 'items': {
+      case 'clothe': {
         const data: ICreateAssetClothe = {
-          bucket: 'items',
+          targetType: 'clothe',
+          bucket,
           type: args[3] as ICreateAssetClothe['type'],
           componentId: Number(args[4]),
           drawableId: Number(args[5]),
@@ -116,8 +123,8 @@ export class ScreenshotController extends AppController {
     payload: ICreateAssetPayload,
     cb?: (url: string) => void
   ) {
-    switch (payload.bucket) {
-      case 'vehicles': {
+    switch (payload.targetType) {
+      case 'vehicle': {
         const url = await this.takeVehicle(
           payload.bucket,
           payload.name,
@@ -127,7 +134,7 @@ export class ScreenshotController extends AppController {
         if (cb) cb(url)
         return url
       }
-      case 'items': {
+      case 'clothe': {
         await this.screenshotService.createClotheAsset(
           payload.gender,
           payload.type,

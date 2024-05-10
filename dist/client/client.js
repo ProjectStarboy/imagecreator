@@ -13012,22 +13012,25 @@
       return response;
     }
     async testScreenShot(source2, args, rawCommand) {
-      const bucket = args[0];
-      if (!bucket)
+      const targetType = args[0];
+      const bucket = args[1];
+      if (!targetType)
         return;
-      switch (bucket) {
-        case "vehicles": {
+      switch (targetType) {
+        case "vehicle": {
           const data = {
-            bucket: "vehicles",
+            targetType: "vehicle",
+            bucket,
             name: args[1]
           };
           const url = this.takeScreenshot(data);
           this.logInfo(url);
           return;
         }
-        case "items": {
+        case "clothe": {
           const data = {
-            bucket: "items",
+            targetType: "clothe",
+            bucket,
             type: args[3],
             componentId: Number(args[4]),
             drawableId: Number(args[5]),
@@ -13041,8 +13044,8 @@
       }
     }
     async takeScreenshot(payload, cb) {
-      switch (payload.bucket) {
-        case "vehicles": {
+      switch (payload.targetType) {
+        case "vehicle": {
           const url = await this.takeVehicle(
             payload.bucket,
             payload.name,
@@ -13053,7 +13056,7 @@
             cb(url);
           return url;
         }
-        case "items": {
+        case "clothe": {
           await this.screenshotService.createClotheAsset(
             payload.gender,
             payload.type,
@@ -13097,6 +13100,10 @@
   };
   __decorateClass([
     (0, import_starboy_framework2.ChatCommand)("testscreenshot", "Take a screenshot of the vehicle you're in", [
+      {
+        name: "targetType",
+        help: "vehicle | clothe | owned_vehicles"
+      },
       {
         name: "bucket",
         help: "Bucket of the screenshot"
