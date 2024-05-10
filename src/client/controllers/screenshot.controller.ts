@@ -8,7 +8,11 @@ import {
 import { AppController, IVehicleProperties } from '@core-shared/interfaces/'
 import { emitCallback } from 'utils/callback'
 import { ScreenshotService } from 'services/screenshot.service'
-import { ICreateAssetPayload } from '../../shared/types/payload.type'
+import {
+  ICreateAssetClothe,
+  ICreateAssetPayload,
+  ICreateAssetVehicle,
+} from '../../shared/types/payload.type'
 
 @Controller()
 export class ScreenshotController extends AppController {
@@ -43,27 +47,75 @@ export class ScreenshotController extends AppController {
     await this.screenshotService.destroy()
     return response
   }
-  /* @ChatCommand('takeclothe', "Take a screenshot of the vehicle you're in", [
-    { name: 'name', help: 'vehicle spawn name' },
-  ])
-  async takeClothe(source: string, [name]: string[]) {
-    this.logInfo('Taking clothe screenshot...')
 
-    if (!name) {
-      throw new Error('You must provide a name for the screenshot')
+  @ChatCommand('testscreenshot', "Take a screenshot of the vehicle you're in", [
+    {
+      name: 'bucket',
+      help: 'Bucket of the screenshot',
+    },
+    {
+      name: 'name',
+      help: 'Name of the screenshot',
+    },
+    {
+      name: 'vehicleName',
+      help: 'Vehicle name',
+    },
+    {
+      name: 'type',
+      help: 'component | props | vehicle',
+    },
+    {
+      name: 'componentId',
+      help: 'Component ID',
+    },
+    {
+      name: 'drawableId',
+      help: 'Drawable ID',
+    },
+    {
+      name: 'textureId',
+      help: 'Texture ID',
+    },
+    {
+      name: 'gender',
+      help: 'gender',
+    },
+  ])
+  async testScreenShot(source: any, args: string[], rawCommand: string) {
+    const bucket = args[0]
+    if (!bucket) return
+    switch (bucket) {
+      case 'vehicles': {
+        const data: ICreateAssetVehicle = {
+          bucket: 'vehicles',
+          name: args[1],
+        }
+        const url = this.takeScreenshot(data)
+        this.logInfo(url)
+        return
+      }
+      case 'items': {
+        const data: ICreateAssetClothe = {
+          bucket: 'items',
+          type: args[3] as ICreateAssetClothe['type'],
+          componentId: Number(args[4]),
+          drawableId: Number(args[5]),
+          textureId: Number(args[6]),
+          name: args[1],
+          gender: args[7] as ICreateAssetClothe['gender'],
+        }
+        const url = this.takeScreenshot(data)
+        this.logInfo(url)
+      }
     }
-    await this.screenshotService.createClotheAsset(name)
-    const response = await emitCallback<string>('screenshot:takeScreenshot', [
-      name,
-      'items',
-    ])
-    this.logInfo(response)
-    await this.screenshotService.destroy()
-    return response
-  } */
+  }
 
   @Event('screenshot:takeScreenshot')
-  async takeScreenshot(payload: ICreateAssetPayload, cb: any) {
+  async takeScreenshot(
+    payload: ICreateAssetPayload,
+    cb?: (url: string) => void
+  ) {
     switch (payload.bucket) {
       case 'vehicles': {
         const url = await this.takeVehicle(
@@ -72,7 +124,8 @@ export class ScreenshotController extends AppController {
           payload.name,
           payload.props
         )
-        return cb(url)
+        if (cb) cb(url)
+        return url
       }
       case 'items': {
         await this.screenshotService.createClotheAsset(
@@ -91,7 +144,8 @@ export class ScreenshotController extends AppController {
         if (GetResourceState('ox_inventory') === 'started') {
           exports.ox_inventory.refreshPlayerClothing()
         }
-        return cb(response)
+        if (cb) cb(response)
+        return response
       }
       case 'owned_vehicles': {
         const url = await this.takeVehicle(
@@ -100,7 +154,8 @@ export class ScreenshotController extends AppController {
           payload.vehicleName,
           payload.props
         )
-        return cb(url)
+        if (cb) cb(url)
+        return url
       }
       default:
         break

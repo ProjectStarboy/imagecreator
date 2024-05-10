@@ -13000,6 +13000,35 @@
       await this.screenshotService.destroy();
       return response;
     }
+    async testScreenShot(source2, args, rawCommand) {
+      const bucket = args[0];
+      if (!bucket)
+        return;
+      switch (bucket) {
+        case "vehicles": {
+          const data = {
+            bucket: "vehicles",
+            name: args[1]
+          };
+          const url = this.takeScreenshot(data);
+          this.logInfo(url);
+          return;
+        }
+        case "items": {
+          const data = {
+            bucket: "items",
+            type: args[3],
+            componentId: Number(args[4]),
+            drawableId: Number(args[5]),
+            textureId: Number(args[6]),
+            name: args[1],
+            gender: args[7]
+          };
+          const url = this.takeScreenshot(data);
+          this.logInfo(url);
+        }
+      }
+    }
     async takeScreenshot(payload, cb) {
       switch (payload.bucket) {
         case "vehicles": {
@@ -13009,7 +13038,9 @@
             payload.name,
             payload.props
           );
-          return cb(url);
+          if (cb)
+            cb(url);
+          return url;
         }
         case "items": {
           await this.screenshotService.createClotheAsset(
@@ -13028,7 +13059,9 @@
           if (GetResourceState("ox_inventory") === "started") {
             exports.ox_inventory.refreshPlayerClothing();
           }
-          return cb(response);
+          if (cb)
+            cb(response);
+          return response;
         }
         case "owned_vehicles": {
           const url = await this.takeVehicle(
@@ -13037,7 +13070,9 @@
             payload.vehicleName,
             payload.props
           );
-          return cb(url);
+          if (cb)
+            cb(url);
+          return url;
         }
         default:
           break;
@@ -13049,6 +13084,42 @@
       await this.screenshotService.destroy();
     }
   };
+  __decorateClass([
+    (0, import_starboy_framework2.ChatCommand)("testscreenshot", "Take a screenshot of the vehicle you're in", [
+      {
+        name: "bucket",
+        help: "Bucket of the screenshot"
+      },
+      {
+        name: "name",
+        help: "Name of the screenshot"
+      },
+      {
+        name: "vehicleName",
+        help: "Vehicle name"
+      },
+      {
+        name: "type",
+        help: "component | props | vehicle"
+      },
+      {
+        name: "componentId",
+        help: "Component ID"
+      },
+      {
+        name: "drawableId",
+        help: "Drawable ID"
+      },
+      {
+        name: "textureId",
+        help: "Texture ID"
+      },
+      {
+        name: "gender",
+        help: "gender"
+      }
+    ])
+  ], ScreenshotController.prototype, "testScreenShot", 1);
   __decorateClass([
     (0, import_starboy_framework2.Event)("screenshot:takeScreenshot")
   ], ScreenshotController.prototype, "takeScreenshot", 1);

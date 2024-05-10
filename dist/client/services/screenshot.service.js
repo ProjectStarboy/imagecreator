@@ -703,16 +703,6 @@ let ScreenshotService = class ScreenshotService extends AppService {
             exports['ProjectStarboy'].ExportController_ExecuteService('PlayernameService', 'toggle', true);
         }
         if (this.lastPosition) {
-            /* SetEntityCoords(
-              PlayerPedId(),
-              this.lastPosition[0],
-              this.lastPosition[1],
-              this.lastPosition[2],
-              true,
-              false,
-              false,
-              true
-            ) */
             this.setCoords(this.lastPosition);
             this.lastPosition = undefined;
         }
