@@ -156,6 +156,18 @@ let ScreenshotService = class ScreenshotService extends AppService {
             console.log(name);
             return new Promise((resolve, reject) => {
                 image.getBuffer('image/png', (err, buffer) => __awaiter(this, void 0, void 0, function* () {
+                    const { data: hasBucket } = yield supabase.storage.getBucket(bucket);
+                    if (!hasBucket) {
+                        const { data: createBucketData, error } = yield supabase.storage.createBucket(bucket, {
+                            public: true,
+                            allowedMimeTypes: ['image/*'],
+                        });
+                        if (error) {
+                            reject(error.message);
+                            return;
+                        }
+                        console.log('CREATED BUCKET', createBucketData);
+                    }
                     const { data, error } = yield supabase.storage
                         .from(bucket)
                         .upload(`${name}.png`, buffer, {
