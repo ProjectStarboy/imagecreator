@@ -12365,6 +12365,7 @@
     }
     async spawnVehicle(name, props) {
       await this.prepareGreenscreen();
+      this.processingThread();
       if (!this.greenscreenEntity)
         return;
       if (!this.camera)

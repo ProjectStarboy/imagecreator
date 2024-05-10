@@ -654,6 +654,7 @@ export class ScreenshotService extends AppService {
 
   async spawnVehicle(name: string, props?: IVehicleProperties) {
     await this.prepareGreenscreen()
+    this.processingThread()
     if (!this.greenscreenEntity) return
     if (!this.camera) return
     const vehicleHash = GetHashKey(name)
