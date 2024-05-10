@@ -13044,6 +13044,7 @@
       }
     }
     async takeScreenshot(payload, cb) {
+      console.log(payload);
       TriggerScreenblurFadeOut(0);
       switch (payload.targetType) {
         case "vehicle": {
