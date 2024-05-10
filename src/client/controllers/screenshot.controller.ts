@@ -87,6 +87,7 @@ export class ScreenshotController extends AppController {
     },
   ])
   async testScreenShot(source: any, args: string[], rawCommand: string) {
+    console.log(args)
     const targetType = args[0]
     const bucket = args[1]
     if (!targetType) return

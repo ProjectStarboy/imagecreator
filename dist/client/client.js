@@ -13012,6 +13012,7 @@
       return response;
     }
     async testScreenShot(source2, args, rawCommand) {
+      console.log(args);
       const targetType = args[0];
       const bucket = args[1];
       if (!targetType)
