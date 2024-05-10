@@ -12,4 +12,5 @@ export declare class ScreenshotService extends AppService {
     setCoords(coords: number[]): Promise<void>;
     createClotheAsset(gender: 'male' | 'female', type: 'component' | 'props', componentId: number, drawableId: number, textureId: number): Promise<void>;
     destroy(): Promise<void>;
+    processingThread(): Promise<void>;
 }

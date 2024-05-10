@@ -34,7 +34,7 @@ export class ScreenshotController extends AppController {
     props?: IVehicleProperties
   ) {
     this.logInfo('Taking vehicle screenshot...')
-
+    
     await this.screenshotService.spawnVehicle(vehicleName, props)
     if (!vehicleName) {
       throw new Error('You must provide a name for the screenshot')

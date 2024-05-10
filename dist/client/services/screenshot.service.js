@@ -460,6 +460,7 @@ let ScreenshotService = class ScreenshotService extends AppService {
         const playerCoords = GetEntityCoords(PlayerPedId(), true);
         this.logInfo(playerCoords);
         this.greenscreenEntity = CreateObject(modelHash, -1238.91064453125, -3296.92822265625, 13.940055847167969, false, false, false);
+        this.processingThread();
         SetEntityCoords(PlayerPedId(), -1238.9044189453125, -3296.92822265625, 28.331361770629883, false, false, false, false);
         FreezeEntityPosition(PlayerPedId(), true);
         RequestAnimDict('mp_sleep');
@@ -708,6 +709,15 @@ let ScreenshotService = class ScreenshotService extends AppService {
         }
         FreezeEntityPosition(PlayerPedId(), false);
         emitNet('screenshot:switchBucket', true);
+    }
+    async processingThread() {
+        while (this.greenscreenEntity) {
+            await Sleep(0);
+            HideHudComponentThisFrame(6);
+            HideHudComponentThisFrame(7);
+            HideHudComponentThisFrame(8);
+            HideHudComponentThisFrame(9);
+        }
     }
 };
 ScreenshotService = __decorate([

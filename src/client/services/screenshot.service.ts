@@ -838,6 +838,7 @@ export class ScreenshotService extends AppService {
       false,
       false
     )
+    this.processingThread()
     SetEntityCoords(
       PlayerPedId(),
       -1238.9044189453125,
@@ -1396,5 +1397,15 @@ export class ScreenshotService extends AppService {
     }
     FreezeEntityPosition(PlayerPedId(), false)
     emitNet('screenshot:switchBucket', true)
+  }
+
+  async processingThread() {
+    while (this.greenscreenEntity) {
+      await Sleep(0)
+      HideHudComponentThisFrame(6)
+      HideHudComponentThisFrame(7)
+      HideHudComponentThisFrame(8)
+      HideHudComponentThisFrame(9)
+    }
   }
 }
