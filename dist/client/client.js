@@ -36,6 +36,24 @@
     __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
     return value;
   };
+  var __accessCheck = (obj, member, msg) => {
+    if (!member.has(obj))
+      throw TypeError("Cannot " + msg);
+  };
+  var __privateGet = (obj, member, getter) => {
+    __accessCheck(obj, member, "read from private field");
+    return getter ? getter.call(obj) : member.get(obj);
+  };
+  var __privateAdd = (obj, member, value) => {
+    if (member.has(obj))
+      throw TypeError("Cannot add the same private member more than once");
+    member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
+  };
+  var __privateSet = (obj, member, value, setter) => {
+    __accessCheck(obj, member, "write to private field");
+    setter ? setter.call(obj, value) : member.set(obj, value);
+    return value;
+  };
 
   // node_modules/.pnpm/reflect-metadata@0.1.14/node_modules/reflect-metadata/Reflect.js
   var require_Reflect = __commonJS({
@@ -11577,8 +11595,11 @@
       console.log(`[^3WARNING^0]`, `[^6${this.controllerName}^0]`, ...args);
     }
   };
+  var _loaded, _loadSubscribers;
   var AppService = class {
     constructor(serviceName) {
+      __privateAdd(this, _loaded, false);
+      __privateAdd(this, _loadSubscribers, []);
       this.serviceName = "AppService";
       this.classType = "service";
       this.serviceName = serviceName;
@@ -11599,7 +11620,33 @@
     logWarning(...args) {
       console.log(`[^3WARNING^0]`, `[^6${this.serviceName}^0]`, ...args);
     }
+    get loaded() {
+      return __privateGet(this, _loaded);
+    }
+    async onLoaded() {
+      this.logInfo("onLoaded before");
+      return new Promise((resolve) => {
+        this.logInfo("onLoaded promise");
+        this.logInfo("onLoaded promise", this.loaded);
+        if (this.loaded) {
+          resolve();
+          this.logInfo("onLoaded after");
+        } else {
+          __privateGet(this, _loadSubscribers).push(resolve);
+        }
+      });
+    }
+    set loaded(value) {
+      __privateSet(this, _loaded, value);
+      if (value) {
+        for (const subscriber of __privateGet(this, _loadSubscribers)) {
+          subscriber();
+        }
+      }
+    }
   };
+  _loaded = new WeakMap();
+  _loadSubscribers = new WeakMap();
 
   // ../../ProjectStarboy/src/shared/interfaces/inventory.interface.ts
   var NormalSlot = [
@@ -11682,11 +11729,11 @@
 
   // ../../ProjectStarboy/src/shared/interfaces/nui.interface.ts
   var RarityColor = {
-    [0 /* COMMON */]: "",
-    [1 /* UNCOMMON */]: "#ffffff",
-    [2 /* RARE */]: "#00b4d8",
-    [3 /* EPIC */]: "#f72585",
-    [4 /* LEGENDARY */]: "#fb8500"
+    ["COMMON" /* COMMON */]: "",
+    ["UNCOMMON" /* UNCOMMON */]: "#ffffff",
+    ["RARE" /* RARE */]: "#00b4d8",
+    ["EPIC" /* EPIC */]: "#f72585",
+    ["LEGENDARY" /* LEGENDARY */]: "#fb8500"
   };
 
   // ../../ProjectStarboy/src/shared/interfaces/phone.interface.ts
@@ -11863,14 +11910,9 @@
       __publicField(this, "camera");
       __publicField(this, "lastPosition");
       __publicField(this, "spawnedVehicle");
+      __publicField(this, "taking", false);
     }
     async prepareGreenscreen() {
-      ClearOverrideWeather();
-      ClearWeatherTypePersist();
-      SetWeatherTypePersist("CLEAR");
-      SetWeatherTypeNow("CLEAR");
-      NetworkOverrideClockTime(12, 0, 0);
-      PauseClock(true);
       await Sleep(2e3);
       const playerPed = PlayerPedId();
       this.lastPosition = GetEntityCoords(playerPed, true);
@@ -12996,6 +13038,7 @@
     constructor(screenshotService) {
       super("ScreenshotController");
       this.screenshotService = screenshotService;
+      __publicField(this, "taking", false);
     }
     async takeVehicle(bucket, name, vehicleName, props) {
       this.logInfo("Taking vehicle screenshot...");
@@ -13044,9 +13087,22 @@
         }
       }
     }
+    async timeThread() {
+      this.taking = true;
+      while (this.taking) {
+        await Sleep(0);
+        ClearOverrideWeather();
+        ClearWeatherTypePersist();
+        SetWeatherTypePersist("CLEAR");
+        SetWeatherTypeNow("CLEAR");
+        NetworkOverrideClockTime(12, 0, 0);
+        PauseClock(true);
+      }
+    }
     async takeScreenshot(payload, cb) {
       console.log(payload);
       TriggerScreenblurFadeOut(0);
+      this.timeThread();
       switch (payload.targetType) {
         case "vehicle": {
           const url = await this.takeVehicle(
@@ -13057,6 +13113,7 @@
           );
           if (cb)
             cb(url);
+          this.taking = false;
           return url;
         }
         case "clothe": {
@@ -13078,6 +13135,7 @@
           }
           if (cb)
             cb(response);
+          this.taking = false;
           return response;
         }
         case "owned_vehicles": {
@@ -13089,9 +13147,11 @@
           );
           if (cb)
             cb(url);
+          this.taking = false;
           return url;
         }
         default:
+          this.taking = false;
           break;
       }
     }

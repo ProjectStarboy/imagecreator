@@ -137,17 +137,12 @@ export class ScreenshotService extends AppService {
   camera?: number
   lastPosition?: number[]
   spawnedVehicle?: number
+  taking: boolean = false
   constructor() {
     super('ScreenshotService')
   }
 
   async prepareGreenscreen() {
-    ClearOverrideWeather()
-    ClearWeatherTypePersist()
-    SetWeatherTypePersist('CLEAR')
-    SetWeatherTypeNow('CLEAR')
-    NetworkOverrideClockTime(12, 0, 0)
-    PauseClock(true)
     await Sleep(2000)
     const playerPed = PlayerPedId()
     this.lastPosition = GetEntityCoords(playerPed, true)

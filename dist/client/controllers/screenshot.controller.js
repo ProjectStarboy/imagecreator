@@ -3,8 +3,10 @@ import { ChatCommand, Controller, Event, Inject, } from 'starboy-framework';
 import { AppController } from '@core-shared/interfaces/';
 import { emitCallback } from 'utils/callback';
 import { ScreenshotService } from 'services/screenshot.service';
+import { Sleep } from '@core-shared/utils';
 let ScreenshotController = class ScreenshotController extends AppController {
     screenshotService;
+    taking = false;
     constructor(screenshotService) {
         super('ScreenshotController');
         this.screenshotService = screenshotService;
@@ -59,14 +61,28 @@ let ScreenshotController = class ScreenshotController extends AppController {
             }
         }
     }
+    async timeThread() {
+        this.taking = true;
+        while (this.taking) {
+            await Sleep(0);
+            ClearOverrideWeather();
+            ClearWeatherTypePersist();
+            SetWeatherTypePersist('CLEAR');
+            SetWeatherTypeNow('CLEAR');
+            NetworkOverrideClockTime(12, 0, 0);
+            PauseClock(true);
+        }
+    }
     async takeScreenshot(payload, cb) {
         console.log(payload);
         TriggerScreenblurFadeOut(0);
+        this.timeThread();
         switch (payload.targetType) {
             case 'vehicle': {
                 const url = await this.takeVehicle(payload.bucket, payload.name, payload.name, payload.props);
                 if (cb)
                     cb(url);
+                this.taking = false;
                 return url;
             }
             case 'clothe': {
@@ -79,15 +95,18 @@ let ScreenshotController = class ScreenshotController extends AppController {
                 }
                 if (cb)
                     cb(response);
+                this.taking = false;
                 return response;
             }
             case 'owned_vehicles': {
                 const url = await this.takeVehicle(payload.bucket, payload.name, payload.vehicleName, payload.props);
                 if (cb)
                     cb(url);
+                this.taking = false;
                 return url;
             }
             default:
+                this.taking = false;
                 break;
         }
     }

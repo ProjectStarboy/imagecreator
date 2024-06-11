@@ -13,9 +13,11 @@ import {
   ICreateAssetPayload,
   ICreateAssetVehicle,
 } from '../../shared/types/payload.type'
+import { Sleep } from '@core-shared/utils'
 
 @Controller()
 export class ScreenshotController extends AppController {
+  taking = false
   constructor(
     @Inject(ScreenshotService)
     private readonly screenshotService: ScreenshotService
@@ -119,6 +121,18 @@ export class ScreenshotController extends AppController {
     }
   }
 
+  async timeThread() {
+    this.taking = true
+    while (this.taking) {
+      await Sleep(0)
+      ClearOverrideWeather()
+      ClearWeatherTypePersist()
+      SetWeatherTypePersist('CLEAR')
+      SetWeatherTypeNow('CLEAR')
+      NetworkOverrideClockTime(12, 0, 0)
+      PauseClock(true)
+    }
+  }
   @Event('screenshot:takeScreenshot')
   async takeScreenshot(
     payload: ICreateAssetPayload,
@@ -126,6 +140,7 @@ export class ScreenshotController extends AppController {
   ) {
     console.log(payload)
     TriggerScreenblurFadeOut(0)
+    this.timeThread()
     switch (payload.targetType) {
       case 'vehicle': {
         const url = await this.takeVehicle(
@@ -135,6 +150,7 @@ export class ScreenshotController extends AppController {
           payload.props
         )
         if (cb) cb(url)
+        this.taking = false
         return url
       }
       case 'clothe': {
@@ -155,6 +171,7 @@ export class ScreenshotController extends AppController {
           exports.ox_inventory.refreshPlayerClothing()
         }
         if (cb) cb(response)
+        this.taking = false
         return response
       }
       case 'owned_vehicles': {
@@ -165,9 +182,11 @@ export class ScreenshotController extends AppController {
           payload.props
         )
         if (cb) cb(url)
+        this.taking = false
         return url
       }
       default:
+        this.taking = false
         break
     }
   }

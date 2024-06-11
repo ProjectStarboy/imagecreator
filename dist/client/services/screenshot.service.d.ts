@@ -4,6 +4,7 @@ export declare class ScreenshotService extends AppService {
     camera?: number;
     lastPosition?: number[];
     spawnedVehicle?: number;
+    taking: boolean;
     constructor();
     prepareGreenscreen(): Promise<void>;
     setVehicleProperties(vehicle: number, props: IVehicleProperties): void;
