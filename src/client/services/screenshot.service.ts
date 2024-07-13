@@ -137,7 +137,7 @@ export class ScreenshotService extends AppService {
   camera?: number
   lastPosition?: number[]
   spawnedVehicle?: number
-  taking: boolean = false
+  taking = false
   constructor() {
     super('ScreenshotService')
   }
